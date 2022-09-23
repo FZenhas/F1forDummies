@@ -14,6 +14,48 @@ DROP TABLE if EXISTS teams;
 
 DROP TABLE if EXISTS iconic_drivers;
 
+DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS users_type;
+
+DROP TABLE IF EXISTS news;
+
+CREATE TABLE news (
+id INT PRIMARY KEY AUTO_INCREMENT,
+text VARCHAR(255)
+);
+
+INSERT INTO news(text) VALUES
+('Oficial: Tsunoda fica na AlphaTauri e há menos uma vaga na F1'),
+('F1: Hamilton sobre reforma: "Eu amo o que faço e não pretendo parar tão cedo"'),
+('Horner admite arrependimento por ter perdido a oportunidade de integrar Piastri na academia da Red Bull'),
+('Mónaco permanece no calendário da Fórmula 1 até 2025'),
+('Binotto admite que a Ferrari precisa de melhorar e fazer alterações para voltar aos títulos'),
+('Horner admite arrependimento por ter perdido a oportunidade de integrar Piastri na academia da Red Bull');
+
+
+CREATE TABLE users_type(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    description VARCHAR(255)
+);
+
+INSERT INTO users_type (description) VALUES 
+    ('admin'), 
+    ('user');
+
+CREATE TABLE `users`(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(100) UNIQUE,
+    email VARCHAR(255),
+    password VARCHAR(100),
+    photo VARCHAR(255),
+    user_type_id INT,
+
+    FOREIGN KEY (user_type_id) REFERENCES users_type(id)
+);
+
+INSERT INTO `users`(username, email, password, user_type_id) VALUES
+    ('admin', 'admin@admin.pt','admin', 1),
+    ('user', 'user@userpt', 'user', 2);
 CREATE TABLE iconic_drivers(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(60) NOT NULL,
@@ -69,34 +111,34 @@ CREATE TABLE grand_prix(
     end_date Date NOT NULL,
     circuit VARCHAR (255) NOT NULL,
     circuit_image VARCHAR (255) NOT NULL,
-    points INT(3) NOT NULL, 
+    country_image VARCHAR (255), 
     visibility BIT DEFAULT 1
 
 );
 
-INSERT into grand_prix(name, country, start_date, end_date, circuit, circuit_image) VALUES
-('FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2022', 'Bahrain', '2022-03-18', '2022-03-20','Bahrain International Circuit', 'Img/Circuito/circuito_bahrain.png'),
-('FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2022', 'Arábia Saudita', '2022-03-25', '2022-03-27', 'Jeddah Corniche Circuit', 'Img/Circuito/circuito_saudi_arabia.png'),
-('FORMULA 1 HEINEKEN AUSTRALIAN GRAND PRIX 2022, Australia 2022', 'Australia', '2022-04-08', '2022-04-10', 'Albert Park Circuit', 'Img/Circuito/cuicuito_australia.png'),
-('FORMULA 1 ROLEX GRAN PREMIO DEL MADE IN ITALY E DELL EMILIA-ROMAGNA 2022', 'Itália', '2022-04-22', '2022-04-24', 'Imola or Autodromo Enzo e Dino Ferrari', 'Img/Circuito/circuito_Italy.png'),
-('FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2022', 'EUA', '2022-05-06', '2022-05-08', 'Miami International Autodrome', 'Img/Circuito/circuito_Miami.png'),
-('FORMULA 1 PIRELLI GRAN PREMIO DE ESPAÑA 2022', 'Espanha', '2022-05-20', '2022-05-22', 'Circuit de Barcelona-Catalunya', 'Img/Circuito/circuito_Espanha.png'),
-('FORMULA 1 GRAND PRIX DE MONACO 2022', 'Mónaco', '2022-05-27', '2022-05-29', 'Circuit de Monaco', 'Img/Circuito/circuito_monaco.png'),
-('FORMULA 1 AZERBAIJAN GRAND PRIX 2022', 'Azerbeijão', '2022-06-10', '2022-06-12', 'Baku City Circuit', 'Img/Circuito/circuito_azerbaijao.png'),
-('FORMULA 1 AWS GRAND PRIX DU CANADA 2022', 'Canada', '2022-06-17', '2022-06-19', 'Circuit Gilles-Villeneuve', 'Img/Circuito/circuito_canada.png'),
-('FORMULA 1 LENOVO BRITISH GRAND PRIX 2022', 'Reino Unido', '2022-07-01', '2022-07-03', 'Silverstone Circuit', 'Img/Circuito/circuito_GB.png'),
-('FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2022', 'Áustria', '2022-07-08', '2022-07-10', 'Red Bull Ring', 'Img/Circuito/circuito_Austria.png'),
-('FORMULA 1 LENOVO GRAND PRIX DE FRANCE 2022', 'França', '2022-07-22', '2022-07-24', 'França', 'Img/Circuito/circuito_Franca.png'),
-('FORMULA 1 ARAMCO MAGYAR NAGYDÍJ 2022', 'Hungria', '2022-07-29', '2022-07-31', 'Hungaroring', 'Img/Circuito/circuito_Hungria.png'),
-('FORMULA 1 ROLEX BELGIAN GRAND PRIX 2022', 'Bélgica', '2022-08-26', '2022-08-28', 'Circuit de Spa-Francorchamps', 'Img/Circuito/circuito_Belgica.png'),
-('FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2022', 'Países Baixos', '2022-09-02', '2022-09-04', 'Circuit Zandvoort', 'Img/Circuito/circuito_Holanda.png'),
-("FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2022", 'Itália', '2022-09-09', '2022-09-11', 'Autodromo Nazionale Monza', 'Img/Circuito/circuito_MonzaIt.png'),
-('FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2022', 'Singapura', '2022-09-30', '2022-10-02', 'Marina Bay Street Circuit', 'Img/Circuito/circuito_Singapura.png'),
-('FORMULA 1 HONDA JAPANESE GRAND PRIX 2022', 'Japão', '2022-10-07', '2022-10-09', 'Suzuka International Racing Course', 'Img/Circuito/circuito_Japao.png'),
-('FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022', 'EUA', '2022-10-21', '2022-10-23', 'Circuit of The Americas', 'Img/Circuito/circuito_USA_Austin.png'),
-('FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2022', 'Mexico', '2022-10-28', '2022-10-30', 'Autódromo Hermanos Rodríguez', 'Img/Circuito/circuito_Mexico.png'),
-('FORMULA 1 HEINEKEN GRANDE PRÊMIO DE SÃO PAULO 2022', 'Brasil', '2022-11-11', '2022-11-13', 'Autódromo José Carlos Pace', 'Img/Circuito/circuito_brasil.png'),
-('FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2022', 'Abu Dhabi', '2022-11-18', '2022-11-20', 'Yas Marina Circuit', 'Img/Circuito/circuito_AbuDhabi.png');
+INSERT into grand_prix(name, country, start_date, end_date, circuit, circuit_image, country_image) VALUES
+('FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2022', 'Bahrain', '2022-03-18', '2022-03-20','Bahrain International Circuit', 'Img/Circuito/circuito_bahrain.png', 'Img/bandeiras/bahrain.jpg'),
+('FORMULA 1 STC SAUDI ARABIAN GRAND PRIX 2022', 'Arábia Saudita', '2022-03-25', '2022-03-27', 'Jeddah Corniche Circuit', 'Img/Circuito/circuito_saudi_arabia.png', 'Img/bandeiras/saudi-arabia.jpg'),
+('FORMULA 1 HEINEKEN AUSTRALIAN GRAND PRIX 2022, Australia 2022', 'Australia', '2022-04-08', '2022-04-10', 'Albert Park Circuit', 'Img/Circuito/cuicuito_australia.png', 'Img/bandeiras/Australia.jpg'),
+('FORMULA 1 ROLEX GRAN PREMIO DEL MADE IN ITALY E DELL EMILIA-ROMAGNA 2022', 'Itália', '2022-04-22', '2022-04-24', 'Imola or Autodromo Enzo e Dino Ferrari', 'Img/Circuito/circuito_Italy.png', 'Img/bandeiras/italia.jpg'),
+('FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2022', 'EUA', '2022-05-06', '2022-05-08', 'Miami International Autodrome', 'Img/Circuito/circuito_Miami.png', 'Img/bandeiras/EUA.jpg'),
+('FORMULA 1 PIRELLI GRAN PREMIO DE ESPAÑA 2022', 'Espanha', '2022-05-20', '2022-05-22', 'Circuit de Barcelona-Catalunya', 'Img/Circuito/circuito_Espanha.png', 'Img/bandeiras/Espanha.jpg'),
+('FORMULA 1 GRAND PRIX DE MONACO 2022', 'Mónaco', '2022-05-27', '2022-05-29', 'Circuit de Monaco', 'Img/Circuito/circuito_monaco.png', 'Img/bandeiras/Monaco.jpg'),
+('FORMULA 1 AZERBAIJAN GRAND PRIX 2022', 'Azerbeijão', '2022-06-10', '2022-06-12', 'Baku City Circuit', 'Img/Circuito/circuito_azerbaijao.png', 'Img/bandeiras/azerbaijao.jpg'),
+('FORMULA 1 AWS GRAND PRIX DU CANADA 2022', 'Canada', '2022-06-17', '2022-06-19', 'Circuit Gilles-Villeneuve', 'Img/Circuito/circuito_canada.png', 'Img/bandeiras/Canada.jpg'),
+('FORMULA 1 LENOVO BRITISH GRAND PRIX 2022', 'Reino Unido', '2022-07-01', '2022-07-03', 'Silverstone Circuit', 'Img/Circuito/circuito_GB.png', 'Img/bandeiras/UK.jpg'),
+('FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2022', 'Áustria', '2022-07-08', '2022-07-10', 'Red Bull Ring', 'Img/Circuito/circuito_Austria.png', 'Img/bandeiras/austria.gif'),
+('FORMULA 1 LENOVO GRAND PRIX DE FRANCE 2022', 'França', '2022-07-22', '2022-07-24', 'França', 'Img/Circuito/circuito_Franca.png', 'Img/bandeiras/Franca.gif'),
+('FORMULA 1 ARAMCO MAGYAR NAGYDÍJ 2022', 'Hungria', '2022-07-29', '2022-07-31', 'Hungaroring', 'Img/Circuito/circuito_Hungria.png', 'Img/bandeiras/hungria.gif'),
+('FORMULA 1 ROLEX BELGIAN GRAND PRIX 2022', 'Bélgica', '2022-08-26', '2022-08-28', 'Circuit de Spa-Francorchamps', 'Img/Circuito/circuito_Belgica.png', 'Img/bandeiras/belgica.jpg'),
+('FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2022', 'Países Baixos', '2022-09-02', '2022-09-04', 'Circuit Zandvoort', 'Img/Circuito/circuito_Holanda.png', 'Img/bandeiras/holanda.gif'),
+("FORMULA 1 PIRELLI GRAN PREMIO D'ITALIA 2022", 'Itália', '2022-09-09', '2022-09-11', 'Autodromo Nazionale Monza', 'Img/Circuito/circuito_MonzaIt.png', 'Img/bandeiras/italia.jpg'),
+('FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2022', 'Singapura', '2022-09-30', '2022-10-02', 'Marina Bay Street Circuit', 'Img/Circuito/circuito_Singapura.png', 'Img/bandeiras/singapura.png'),
+('FORMULA 1 HONDA JAPANESE GRAND PRIX 2022', 'Japão', '2022-10-07', '2022-10-09', 'Suzuka International Racing Course', 'Img/Circuito/circuito_Japao.png', 'Img/bandeiras/Japao.jpg'),
+('FORMULA 1 ARAMCO UNITED STATES GRAND PRIX 2022', 'EUA', '2022-10-21', '2022-10-23', 'Circuit of The Americas', 'Img/Circuito/circuito_USA_Austin.png', 'Img/bandeiras/EUA.jpg'),
+('FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2022', 'Mexico', '2022-10-28', '2022-10-30', 'Autódromo Hermanos Rodríguez', 'Img/Circuito/circuito_Mexico.png', 'Img/bandeiras/Mexico.gif'),
+('FORMULA 1 HEINEKEN GRANDE PRÊMIO DE SÃO PAULO 2022', 'Brasil', '2022-11-11', '2022-11-13', 'Autódromo José Carlos Pace', 'Img/Circuito/circuito_brasil.png', 'Img/bandeiras/brasil.jpg'),
+('FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2022', 'Abu Dhabi', '2022-11-18', '2022-11-20', 'Yas Marina Circuit', 'Img/Circuito/circuito_AbuDhabi.png', 'Img/bandeiras/abu-dhabi.jpg');
 
 CREATE TABLE drivers(
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -206,6 +248,7 @@ INSERT INTO results(grand_prix_id,driver_id, driver_position) VALUES
 ('20',NULL,'0'),
 ('20',NULL,'0'),
 ('20',NULL,'0'),
+('21',NULL,'0'),
 ('21',NULL,'0'),
 ('21',NULL,'0'),
 ('22',NULL,'0'),

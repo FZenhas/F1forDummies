@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php?p=paginainicial"><img src="img/Logo/logotipo2.png" alt=""></a>
@@ -18,12 +17,12 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Classificação
+            Classificação
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="index.php?p=Classificacao-pilotos">Classificação Pilotos</a></li>
             <li><a class="dropdown-item" href="index.php?p=Classificacao-construtores">Classificação Construtores</a></li>
-            
+
           </ul>
         </li>
         <li class="nav-item">
@@ -39,11 +38,17 @@
           <a class="nav-link" href="index.php?p=Quizz">Quizz</a>
         </li>
       </ul>
-      
+
       <form class="d-flex" action="index.php">
         <input class="form-control me-2" type="search" name="search" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+        <button class="btn btn-outline-success" type="submit">Pesquisar pilotos</button>
       </form>
+      <form class="d-flex" action="index.php">
+        <input class="form-control me-2" type="search" name="search-teams" placeholder="Pesquisar" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Pesquisar equipas</button>
+      </form>
+
+  
     </div>
   </div>
 </nav>

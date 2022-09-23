@@ -27,8 +27,9 @@ if ($result->num_rows > 0) {
     </a>
     <div class="card-body">
       <h5 class="card-title"><?= $row['name'] ?></h5>
-      <p class="card-text"><?= $row['country'] ?>, <?= $row['start_date'] ?> - <?= $row['end_date'] ?></p>
+      <p class="card-text"><?= $row['country'] ?></p>
       <p class="card-text"><?= $row['circuit'] ?></p>
+      <p class="card-text"><?= $row['start_date'] ?> - <?= $row['end_date'] ?></p>
       <br>
 
       <?php if ($row['podium'] == NULL) { ?>

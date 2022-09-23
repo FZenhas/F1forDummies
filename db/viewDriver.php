@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
                 <div class="flip-card">
                     <div class="flip-card-front"><img src="<?= $row['picture'] ?>" alt=""></div>
                     <div class="flip-card-back">
-                        <h2><?= $row['driver_name'] ?>, <?= $row['number'] ?></h2>
+                        <h2><?= $row['driver_name'] ?> #<?= $row['number'] ?></h2>
                         <p>Equipa: <?= $row['team_name'] ?></p>
                         <p>DOB:<?= $row['date_of_birth'] ?></p>
                         <p>Nacionalidade: <?= $row['nationality'] ?></p>

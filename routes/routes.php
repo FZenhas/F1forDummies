@@ -37,6 +37,8 @@ else
     include ('content/pages/404.php');
 }else if(isset($_GET['search']))
     include('content/pages/Pilotos.php');
+else if(isset($_GET['search-teams']))
+    include('content/pages/Construtores.php');
 else{
     include('content/pages/paginainicial.php');
 }
