@@ -23,9 +23,23 @@ else if($_GET['p'] == 'PilotosIconicos')
     include('content/pages/PilotosIconicos.php');
 else if($_GET['p'] == 'Quizz')
     include('content/pages/Quizz.php');
+else if($_GET['p'] == 'login')
+    include('content/pages/login.php');
+else if($_GET['p'] == 'registo')
+    include('content/pages/registo.php');
+else if($_GET['p'] == 'minhaconta')
+    include('content/pages/minha-conta.php');
+else if($_GET['p'] == 'administracao')
+    include('content/pages/administracao.php');
+else if($_GET['p'] == 'logout')
+    include('content/pages/logout.php');
 else
     include ('content/pages/404.php');
-}else{
+}else if(isset($_GET['search']))
+    include('content/pages/Pilotos.php');
+else if(isset($_GET['search-teams']))
+    include('content/pages/Construtores.php');
+else{
     include('content/pages/paginainicial.php');
 }
 ?>

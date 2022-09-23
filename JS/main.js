@@ -114,5 +114,15 @@ function escolherResposta(nrPergunta){
 }
   
 
-
-  
+function loadNews(){
+    var setint = setInterval(function(){
+        var x = new XMLHttpRequest();
+        x.onreadystatechange=function(){
+            if(x.readyState==4 && x.status==200){
+                document.getElementById('destaque').innerHTML = x.responseText;
+            }
+        }
+        x.open("GET","db/news.php",true);
+        x.send();
+    },3000);    //executar de 10s em 10s
+}
