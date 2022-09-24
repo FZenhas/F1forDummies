@@ -1,6 +1,6 @@
 <?php
 
-
+define('_DEFVAR', 1);
 include('conn.php');
 
 $sql = "SELECT team_name, logo, points FROM teams ORDER by points DESC";

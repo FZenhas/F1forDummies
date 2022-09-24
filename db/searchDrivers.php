@@ -1,5 +1,6 @@
 <?php
 
+define('_DEFVAR', 1);
 include('conn.php');
 
 if (empty($_GET['search'])) {

@@ -1,6 +1,6 @@
 <?php
 
-
+define('_DEFVAR', 1);
 include('conn.php');
 
 $sql = "SELECT gp.name, gp.country_image, gp.country, gp.start_date, gp.end_date, DATEDIFF(gp.start_date, CURRENT_TIMESTAMP) as time FROM grand_prix gp
@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
         <img class="next-race-img" src="<?= $row['country_image'] ?>"  alt=""> 
         <p>Próxima corrida #17 <b><?= $row['country'] ?></b></p>
         <button id="race-time"><i class="bi bi-clock-fill" id="clock"></i> </i>Faltam: <b><?= $row['time'] ?> dias</b></button>
-        <p><b><?= $row['name'] ?></b></p>
+        <p><b><?= $row['name'] ?> </b></p>
         <p><?= $row['start_date'] ?> - <?= $row['end_date'] ?></p>
     </div>
 

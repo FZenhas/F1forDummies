@@ -487,4 +487,12 @@ footer i:hover{
     font-size: 1.5em;
     font-family: "Agency FB";
     color: #E4F6F8;
+} 
+
+#search{
+    font-style: normal;
+    font-size: smaller;
+    padding: 2px;
+    margin-right: 3px;
 }
+

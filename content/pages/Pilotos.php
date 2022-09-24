@@ -7,13 +7,12 @@
             <div class="row ">
 
 
-    <?php 
+    <?php
     if(!isset($_GET['search']))
         include('db/viewDriver.php');
     else
         include('db/searchDrivers.php');
     ?>
-            
                 <p>Para saber qual a classificação atual de cada Piloto consulta esta <a href="index.php?p=Classificacao-pilotos"> página.</a></p>
             </div>
         </div>

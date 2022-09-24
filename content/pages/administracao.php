@@ -1,5 +1,5 @@
 <?php 
-if($_SESSION['tipoUtilizador']!=1){
+if($_SESSION['type']!=1){
     header('Location: index.php?p=404');
     exit();
 }?>

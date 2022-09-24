@@ -1,6 +1,6 @@
 <?php
 
-
+define('_DEFVAR', 1);
 include('conn.php');
 
 $sql = "SELECT d.driver_name, d.number, d.date_of_birth, d.nationality, d.world_championship, d.curiosity, d.url_ig, d.picture, d.points, t.team_name FROM drivers d

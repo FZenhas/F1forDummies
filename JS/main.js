@@ -126,3 +126,5 @@ function loadNews(){
         x.send();
     },3000);    //executar de 10s em 10s
 }
+
+

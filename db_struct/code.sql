@@ -54,8 +54,8 @@ CREATE TABLE `users`(
 );
 
 INSERT INTO `users`(username, email, password, user_type_id) VALUES
-    ('admin', 'admin@admin.pt','admin', 1),
-    ('user', 'user@userpt', 'user', 2);
+    ('admin', 'admin@admin.pt',MD5('admin'), 1),
+    ('user', 'user@userpt', MD5('user'), 2);
 CREATE TABLE iconic_drivers(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(60) NOT NULL,

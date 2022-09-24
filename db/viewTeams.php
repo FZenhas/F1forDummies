@@ -1,6 +1,6 @@
 <?php
 
-
+define('_DEFVAR', 1);
 include('conn.php');
 
 $sql = "SELECT t.team_name, t.full_team_name, t.location, t.team_chief, t.motor, t.world_championships, t.logo, t.car_pic, t.url_site, t.url_ig, t.team_name,

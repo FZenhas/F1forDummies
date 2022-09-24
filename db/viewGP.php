@@ -1,6 +1,6 @@
 <?php
 
-
+define('_DEFVAR', 1);
 include('conn.php');
 
 $sql = "SELECT gp.name, gp.country, gp.start_date, gp.end_date, gp.circuit, gp.circuit_image, GROUP_CONCAT(DISTINCT r.driver_position, ': ', d.driver_name SEPARATOR ', ') AS podium 

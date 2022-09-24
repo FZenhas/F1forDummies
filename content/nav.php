@@ -5,6 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php?p=F1">Fórmula 1</a>
@@ -19,6 +20,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Classificação
           </a>
+
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="index.php?p=Classificacao-pilotos">Classificação Pilotos</a></li>
             <li><a class="dropdown-item" href="index.php?p=Classificacao-construtores">Classificação Construtores</a></li>
@@ -37,18 +39,38 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=Quizz">Quizz</a>
         </li>
+        <?php
+        if(empty($_SESSION['username'])) {?>
+          <li>
+            <a class="nav-link" href="index.php?p=login"><i class="bi bi-box-arrow-in-right"></i> Login</a>
+          </li>
+        <?php
+        }else if (!empty($_SESSION['username'])) { //utilizador autenticado
+        ?>
+          <li>
+            <a class="nav-link" href="index.php?p=minhaconta">Minha Conta</a>
+          </li>
+          <?php
+          if(!empty($_SESSION['type']) && $_SESSION['type'] == 1) { //APRESENTA ADMINISTRAÇÃO DE FOR USER ADMIN
+          ?>
+            <li>
+              <a class="nav-link" href="index.php?p=administracao">Admin</a>
+            </li>
+          <?php
+          }?>
+          <li>
+            <a class="nav-link" href="index.php?p=logout">Logout</a>
+          </li>
+        <?php }?>
       </ul>
-
       <form class="d-flex" action="index.php">
-        <input class="form-control me-2" type="search" name="search" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar pilotos</button>
+        <input class="form-control me-2" type="search" name="search" placeholder="Pesquisar pilotos" aria-label="Search">
+        <button id="search" class="btn btn-outline-success" type="submit">Pesquisar </button><br>
       </form>
       <form class="d-flex" action="index.php">
-        <input class="form-control me-2" type="search" name="search-teams" placeholder="Pesquisar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar equipas</button>
+        <input class="form-control me-2" type="search" name="search-teams" placeholder="Pesquisar equipas" aria-label="Search">
+        <button id="search" class="btn btn-outline-success" type="submit">Pesquisar </button>
       </form>
-
-  
     </div>
   </div>
 </nav>
