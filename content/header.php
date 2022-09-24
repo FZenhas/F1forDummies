@@ -9,6 +9,5 @@
             </div>
         </div>
 </div>
-   
     <?php include('nav.php'); ?>
 </header>

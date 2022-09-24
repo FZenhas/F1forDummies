@@ -38,19 +38,19 @@ CREATE TABLE users_type(
     description VARCHAR(255)
 );
 
-INSERT INTO users_type (description) VALUES 
-    ('admin'), 
+INSERT INTO users_type (description) VALUES
+    ('admin'),
     ('user');
 
 CREATE TABLE `users`(
     id INT PRIMARY KEY AUTO_INCREMENT,
+    user_type_id INT,
+    FOREIGN KEY (user_type_id) REFERENCES users_type(id),
     username VARCHAR(100) UNIQUE,
     email VARCHAR(255),
     password VARCHAR(100),
     photo VARCHAR(255),
-    user_type_id INT,
-
-    FOREIGN KEY (user_type_id) REFERENCES users_type(id)
+    visibility BIT DEFAULT 1
 );
 
 INSERT INTO `users`(username, email, password, user_type_id) VALUES
@@ -86,15 +86,15 @@ CREATE TABLE teams(
     car_pic VARCHAR(255) NOT NULL,
     url_site VARCHAR (500) NOT NULL,
     url_ig VARCHAR(500) NOT NULL,
-    points INT(3) NOT NULL, 
+    points INT(3) NOT NULL,
     visibility BIT DEFAULT 1
 );
 
 INSERT INTO teams(team_name, full_team_name, location, team_chief, motor, world_championships, logo, car_pic, url_site, url_ig, points) VALUES
 ('Alfa Romeo', 'Alfa Romeo F1 Team ORLEN', 'Hinwil, Switzerland', 'Frédéric Vasseur', 'Ferrari', '0', 'Img/Logos_equipas/alfa_romeo.png', 'Img/Equipas_carros/AlfaRomeo.png', 'https://www.sauber-group.com/motorsport/formula-1/', 'https://www.instagram.com/alfaromeoofficial/', '52'),
-('Alpha Tauri', 'Scuderia AlphaTauri', 'Faenza, Italy', 'Franz Tost', 'Red Bull Powertrains','0', 'Img/Logos_equipas/alphatauri.jpg', 'Img/Equipas_carros/alphatauri.png', 'https://scuderia.alphatauri.com/en/', 'https://www.instagram.com/alphataurif1/', '33'), 
+('Alpha Tauri', 'Scuderia AlphaTauri', 'Faenza, Italy', 'Franz Tost', 'Red Bull Powertrains','0', 'Img/Logos_equipas/alphatauri.jpg', 'Img/Equipas_carros/alphatauri.png', 'https://scuderia.alphatauri.com/en/', 'https://www.instagram.com/alphataurif1/', '33'),
 ('Alpine', 'BWT Alpine F1 Team', 'Enstone, United Kingdom', 'Otmar Szafnauer','Renault', '2', 'Img/Logos_equipas/alpine.jpg', 'Img/Equipas_carros/alpine.png', 'https://www.alpine-cars.co.uk/f1-news.html', 'https://www.instagram.com/alpinef1team/', '125'),
-('Aston Martin', 'Aston Martin Aramco Cognizant F1 Team', 'Silverstone, United Kingdom', 'Mike Krack', 'Mercedes', '0', 'Img/Logos_equipas/aston_martin.jpg', 'Img/Equipas_carros/astonmartin.png', 'https://www.astonmartinf1.com/en-GB/', 'https://www.instagram.com/astonmartinf1/?hl=pt', '25'), 
+('Aston Martin', 'Aston Martin Aramco Cognizant F1 Team', 'Silverstone, United Kingdom', 'Mike Krack', 'Mercedes', '0', 'Img/Logos_equipas/aston_martin.jpg', 'Img/Equipas_carros/astonmartin.png', 'https://www.astonmartinf1.com/en-GB/', 'https://www.instagram.com/astonmartinf1/?hl=pt', '25'),
 ('Ferrari', 'Scuderia Ferrari', 'Maranello, Italy', 'Mattia Binotto', 'Ferrari', '16', 'Img/Logos_equipas/Ferrari.jpg', 'Img/Equipas_carros/ferrari.png', 'https://www.ferrari.com/en-PT', 'https://www.instagram.com/ferrari/', '406'),
 ('Haas F1 Team', 'Haas F1 Team', 'Kannapolis, United States', 'Guenther Steiner', 'Ferrari', '0', 'Img/Logos_equipas/Haas.jpg', 'Img/Equipas_carros/haas.png', 'https://www.haasf1team.com/', 'https://www.instagram.com/haasf1team/', '34'),
 ('McLaren', 'McLaren F1 Team', 'Woking, United Kingdom', 'Andreas Seidl', 'Mercedes', '8', 'Img/Logos_equipas/maclaren.jpg', 'Img/Equipas_carros/McLaren.png', 'https://www.mclaren.com/', 'https://www.instagram.com/mclaren/', '107'),
@@ -111,7 +111,7 @@ CREATE TABLE grand_prix(
     end_date Date NOT NULL,
     circuit VARCHAR (255) NOT NULL,
     circuit_image VARCHAR (255) NOT NULL,
-    country_image VARCHAR (255), 
+    country_image VARCHAR (255),
     visibility BIT DEFAULT 1
 
 );
@@ -153,7 +153,7 @@ CREATE TABLE drivers(
     curiosity VARCHAR (1000) NOT NULL,
     url_ig VARCHAR(500) NOT NULL,
     picture VARCHAR(255) NOT NULL,
-    points INT(3) NOT NULL,   
+    points INT(3) NOT NULL,
     visibility BIT DEFAULT 1
 );
 
@@ -184,7 +184,7 @@ CREATE TABLE results(
     id INT AUTO_INCREMENT PRIMARY KEY,
     grand_prix_id INT, FOREIGN KEY (grand_prix_id) REFERENCES grand_prix(id),
     driver_id INT, FOREIGN KEY (driver_id) REFERENCES drivers(id),
-    driver_position INT(2) 
+    driver_position INT(2)
 );
 
 INSERT INTO results(grand_prix_id,driver_id, driver_position) VALUES

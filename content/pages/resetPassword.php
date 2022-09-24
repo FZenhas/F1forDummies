@@ -6,9 +6,9 @@
 
 <form action="db/resetPassword.php" method="get">
 <div class="mb-3">
-          <label for="form-email" class="form-label">Insira o seu username ou email</label>
-          <input type="text" class="form-control" name="form-email" id="form-email">
-      </div>
-      <div>
-        <button type="submit" class="btn btn-primary">Recuperar</button>
-      </div>
+    <label for="form-email" class="form-label">Insira o seu username ou email</label>
+    <input type="text" class="form-control" name="form-email" id="form-email">
+</div>
+<div>
+    <button type="submit" class="btn btn-primary">Recuperar</button>
+</div>

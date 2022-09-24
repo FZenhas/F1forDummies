@@ -24,10 +24,10 @@
   </div>
   <button type="submit" class="btn btn-primary">Registar</button>
   <button class="btn btn-primary"><a href="index.php?p=paginainicial">Sair</a></button>
-
 </form>
+<br>
 
-<?php 
+<?php
 //VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO//VALIDA SE RECEBE CÓDIGO DE ERRO E APRESENTA ALERT CONSOANTE O ERRO
 if(isset($_GET['r'])){
   $r = $_GET['r'];
@@ -39,21 +39,17 @@ if(isset($_GET['r'])){
 
     <?php
   }else if($r == 'pwderrada'){ ?>
-    
     <div class="alert alert-danger" role="alert">
       Passwords não correspondem
     </div>
 
-    <?php
-  }else if($r == 'usernameexistente'){
-    ?>
-    
+    <?php }else if($r == 'usernameexistente'){?>
+
     <div class="alert alert-danger" role="alert">
       Username já existe
     </div>
-    
     <?php
-  } 
+  }
 }
 ?>
 
@@ -65,4 +61,3 @@ if(isset($_GET['r'])){
 
 
 
- 

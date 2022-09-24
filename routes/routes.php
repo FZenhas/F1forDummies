@@ -3,35 +3,37 @@
 if(isset($_GET['p'])){
     $pag=$_GET['p'];
 
-if($_GET['p'] == 'paginainicial')
+if($pag == 'paginainicial')
     include('content/pages/paginainicial.php');
-else if($_GET['p'] == 'F1')
+else if($pag == 'F1')
     include('content/pages/F1.php');
-else if($_GET['p'] == 'Pilotos')
+else if($pag == 'Pilotos')
     include('content/pages/Pilotos.php');
-else if($_GET['p'] == 'Classificacao-pilotos')
+else if($pag == 'Classificacao-pilotos')
     include('content/pages/Classificacao/Classificacao-pilotos.php');
-else if($_GET['p'] == 'Classificacao-construtores')
+else if($pag == 'Classificacao-construtores')
     include('content/pages/Classificacao/Classificacao-construtores.php');
-else if($_GET['p'] == 'Construtores')
+else if($pag == 'Construtores')
     include('content/pages/Construtores.php');
-else if($_GET['p'] == 'Circuito')
+else if($pag == 'Circuito')
     include('content/pages/Circuito.php');
-else if($_GET['p'] == 'Pitstop')
+else if($pag == 'Pitstop')
     include('content/pages/Pitstop.php');
-else if($_GET['p'] == 'PilotosIconicos')
+else if($pag == 'PilotosIconicos')
     include('content/pages/PilotosIconicos.php');
-else if($_GET['p'] == 'Quizz')
+else if($pag == 'Quizz')
     include('content/pages/Quizz.php');
-else if($_GET['p'] == 'login')
+else if($pag == 'login')
     include('content/pages/login.php');
-else if($_GET['p'] == 'registo')
+else if($pag == 'registo')
     include('content/pages/registo.php');
-else if($_GET['p'] == 'minhaconta')
+else if($pag == 'minhaconta')
     include('content/pages/minha-conta.php');
-else if($_GET['p'] == 'administracao')
+else if($pag == 'administracao')
     include('content/pages/administracao.php');
-else if($_GET['p'] == 'logout')
+else if($pag == 'resetPassword')
+    include('content/pages/resetPassword.php');
+else if($pag == 'logout')
     include('content/pages/logout.php');
 else
     include ('content/pages/404.php');

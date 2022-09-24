@@ -36,9 +36,11 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=Quizz">Quizz</a>
         </li>
-        <?php if(empty($_SESSION['username'])){ //utilizador não autenticado?>
+        <?php
+        session_start();
+        if(empty($_SESSION['username'])){ //utilizador não autenticado?>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?p=login"><i class="bi bi-box-arrow-in-right"></i>Login</a>
+            <a class="nav-link" href="index.php?p=login">Login<i class="bi bi-box-arrow-in-right"></i></a>
           </li>
         <?php }
         else if(!empty($_SESSION['username'])){ //utilizador autenticado?>

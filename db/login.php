@@ -10,14 +10,14 @@ $password = $_POST['form-password'];
 define('_DEFVAR', 1);
 include('conn.php');
 
-$sql = "SELECT * FROM `users` WHERE username='$username' AND password=MD5('$password')";
+$sql = "SELECT * FROM `users` WHERE username='$username' AND password=MD5('$password') AND visibility=1";
 
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
 
-    /* --- LOGIN OK, UPDATE last_login --- 
+    /* --- LOGIN OK, UPDATE last_login ---
     $id = $row['id'];
     $sql_update = "UPDATE `users` SET last_login=NOW() WHERE id=$id";*/
     /*$result_update = X $conn->query($sql_update); */

@@ -16,23 +16,23 @@ function guardarResposta(numero_pergunta, evento){
 
 pergunta1.addEventListener('click', function(evento){
     escolherResposta(1);
-    guardarResposta(1, evento)   
+    guardarResposta(1, evento)
 })
 pergunta2.addEventListener('click', function(evento){
     escolherResposta(2);
-    guardarResposta(2, evento)   
+    guardarResposta(2, evento)
 })
 pergunta3.addEventListener('click', function(evento){
     escolherResposta(3);
-    guardarResposta(3, evento)   
+    guardarResposta(3, evento)
 })
 pergunta4.addEventListener('click', function(evento){
     escolherResposta(4);
-    guardarResposta(4, evento)   
+    guardarResposta(4, evento)
 })
 pergunta5.addEventListener('click', function(evento){
     escolherResposta(5);
-    guardarResposta(5, evento)   
+    guardarResposta(5, evento)
 })
 
 function pontuacaoTotal(){
@@ -52,7 +52,7 @@ function infoPontuacao(){
     }else if (pontuacaoTotal() >=3 && pontuacaoTotal() < 5){
         var info_pontuacao = "Está a fazer imensos progressos. Só é 'médio- F1 Dummie'!"
     }else{
-        var info_pontuacao = "O conteúdo desta página foi mesmo útil! Já não é mais um(a) 'F1 Dummie'!" 
+        var info_pontuacao = "O conteúdo desta página foi mesmo útil! Já não é mais um(a) 'F1 Dummie'!"
     }
 
     return info_pontuacao;
@@ -112,7 +112,7 @@ function escolherResposta(nrPergunta){
         document.getElementById(`submit${nrPergunta}`).disabled = false;
 })
 }
-  
+
 
 function loadNews(){
     var setint = setInterval(function(){
@@ -127,4 +127,24 @@ function loadNews(){
     },3000);    //executar de 10s em 10s
 }
 
+var username;
+function account_edit(){
+    document.getElementById('account_btn_edit').style.display='none'
+    document.getElementById('account_btn_cancel').style.display='inline'
+    document.getElementById('account_btn_save').style.display='inline'
+    document.getElementById('account_btn_delete').style.display='none'
+    document.getElementById('account_btn_save_image').style.display='inline'
+    document.getElementById('account_btn_select_img').style.display='inline'
+    document.getElementById('account_btn_save_image').style.display='inline'
 
+    document.getElementById('form-username').removeAttribute('readonly')
+    document.getElementById('form-password').removeAttribute('readonly')
+    document.getElementById('form-email').removeAttribute('readonly')
+
+
+    username=document.getElementById('form-username').value
+}
+
+function account_cancel(){
+    window.location.replace("index.php?p=minhaconta")
+}
