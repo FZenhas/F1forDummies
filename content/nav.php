@@ -36,31 +36,21 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php?p=Quizz">Quizz</a>
         </li>
-        <?php
-        session_start();
-        if(empty($_SESSION['username'])){ //utilizador não autenticado?>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?p=login">Login<i class="bi bi-box-arrow-in-right"></i></a>
-          </li>
-        <?php }
-        else if(!empty($_SESSION['username'])){ //utilizador autenticado?>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?p=minhaconta">Minha Conta</a>
-          </li>
-          <?php if(!empty($_SESSION['type']) && $_SESSION['type']==1){ //utilizador administrador?>
-            <li class="nav-item">
-              <a class="nav-link" href="index.php?p=administracao">Admin</a>
-            </li>
-          <?php } ?>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?p=logout">Logout</a>
-          </li>
-        <?php }?>
       </ul>
-      <form class="d-flex" action="index.php">
-        <input class="form-control me-2" name="search" type="search" placeholder="Pesquisar pilotos" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-      </form>
+      <div class="search-nav-bar">
+        <div>
+          <form class="d-flex" action="index.php">
+            <input class="form-control me-2" name="search" type="search" id="search" placeholder="Pilotos" aria-label="Search">
+            <button class="btn btn-outline-success" id="search-btn-nav" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+        <div>
+          <form class="d-flex" action="index.php">
+            <input class="form-control me-2" name="search-teams" type="search" id="search" placeholder="Equipas" aria-label="Search">
+            <button class="btn btn-outline-success" id="search-btn-nav" type="submit"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

@@ -1,6 +1,6 @@
 <main class="container border my-2 border-2 rounded shadow">
     <br>
-    <h3><?php echo $_SESSION['username'] ?>, bem-vind(a) à F1 4 Dummies!</h3>
+    <h3><?php echo $_SESSION['username'] ?></h3>
 
     <?php include('db/getUserById.php') ?>
     <div class="row">
@@ -9,10 +9,9 @@
                 <input type="text" name="form-id" id="form-id" value="<?= $row['id'] ?>" readonly hidden>
                 <?php if ($row['photo'] != "") {
                 ?><img src="img/users/<?= $row['photo'] ?>" id="form-img" alt="" ><?php
-                                                                                } else {
-                                                                                    ?><img src="img/users/people2.png" id="form-img" alt=""><?php
-                                                                                                                                        }
-                                                                                                                                            ?>
+                } else {
+                ?><img src="img/users/people.png" id="form-img" alt=""><?php
+                }?>
                 <input type="file" name="form-img" id="account_btn_select_img"><br><br>
                 <input class="btn btn-primary" type="submit" name="submit" id="account_btn_save_image" value="Upload" >
             </form>
@@ -57,7 +56,7 @@
                                 <p>Tem a certeza que quer apagar a sua conta?</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                 <button type="submit" class="btn btn-primary">Confirmar</button>
                             </div>
                         </div>

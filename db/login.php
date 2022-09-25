@@ -27,8 +27,9 @@ if ($result->num_rows == 1) {
     $_SESSION['id']=$row['id'];
     $_SESSION['username']=$row['username'];
     $_SESSION['type']=$row['user_type_id'];
+    $_SESSION['data']=$row['photo'];
 
-    header('Location: ../index.php?p=minhaconta');
+    header('Location: ../index.php?p=paginainicial');
 } else {
     header('Location: ../index.php?p=login&r=invalid');
 }

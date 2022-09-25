@@ -42,6 +42,24 @@ header{
     background-color: #dece9c;
 }
 
+#search{
+    width: 38%;
+    margin: auto;
+    padding: 5px;
+}
+
+#search-btn-nav{
+    margin-top: 5px;
+}
+
+/*----------------- NAV LOG ----------------*/
+
+#nav-user-photo{
+    width: 50px;
+    height: 50px;
+}
+
+
 
 /*------------------ MAIN -----------------*/
 main h1{
@@ -489,6 +507,12 @@ footer i:hover{
     color: #E4F6F8;
 }
 
+/* -------------- MINHA CONTA ----------- */
 #account_btn_cancel, #account_btn_save, #account_btn_select_img, #account_btn_save_image{
     display: none;
+}
+
+#form-img{
+    width: 150px;
+    height: 150px;
 }

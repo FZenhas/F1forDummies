@@ -4,9 +4,16 @@ define('_DEFVAR', 1);
 include('conn.php');
 
 if (empty($_GET['search'])) {
-    header('Location:index.php?p=404');
+    if(!headers_sent() ){
+        header('Location: index.php?p=404');
+    }else{
+        echo '<script
+        type="text/javascript">window.location.href="index.php?p=404";</script>';
+    }
     exit();
 }
+
+
 $param = $_GET['search'];
 $sql = "SELECT d.driver_name, d.number, d.date_of_birth, d.nationality, d.world_championship, d.curiosity, d.url_ig, d.picture, d.points, t.team_name FROM drivers d
 JOIN teams t ON d.team_id = t.id WHERE d.visibility=1 AND d.driver_name LIKE '%$param%'";
@@ -39,6 +46,13 @@ if ($result->num_rows > 0) {
         <?php
     }
         ?><?php
+    }else{
+        if(!headers_sent() ){
+            header('Location: index.php?p=404');
+        }else{
+            echo '<script
+            type="text/javascript">window.location.href="index.php?p=404";</script>';
+        }
     }
         $conn->close();
             ?>
