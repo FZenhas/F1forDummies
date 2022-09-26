@@ -30,7 +30,7 @@ if(isset($_GET['r'])){
     </div>
 
     <?php
-  }else if($r == 'camposemfalta'){ ?>
+  }else if($r == 'empty'){ ?>
 
     <div class="alert alert-danger" role="alert">
       Preencha todos os campos para se autenticar

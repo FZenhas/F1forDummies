@@ -31,19 +31,19 @@
 //VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO//VALIDA SE RECEBE CÓDIGO DE ERRO E APRESENTA ALERT CONSOANTE O ERRO
 if(isset($_GET['r'])){
   $r = $_GET['r'];
-  if($r == 'camposemfalta'){ ?>
+  if($r == 'empty'){ ?>
 
     <div class="alert alert-danger" role="alert">
       Preencha todos os campos para se registar
     </div>
 
     <?php
-  }else if($r == 'pwderrada'){ ?>
+  }else if($r == 'pwderror'){ ?>
     <div class="alert alert-danger" role="alert">
       Passwords não correspondem
     </div>
 
-    <?php }else if($r == 'usernameexistente'){?>
+    <?php }else if($r == 'regerror'){?>
 
     <div class="alert alert-danger" role="alert">
       Username já existe

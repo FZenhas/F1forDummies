@@ -40,15 +40,12 @@
       <div class="search-nav-bar">
         <div>
           <form class="d-flex" action="index.php">
-            <input class="form-control me-2" name="search" type="search" id="search" placeholder="Pilotos" aria-label="Search">
+            <input class="form-control me-2" name="search" type="search" id="search" placeholder="pesquisar" aria-label="Search">
             <button class="btn btn-outline-success" id="search-btn-nav" type="submit"><i class="bi bi-search"></i></button>
           </form>
         </div>
         <div>
-          <form class="d-flex" action="index.php">
-            <input class="form-control me-2" name="search-teams" type="search" id="search" placeholder="Equipas" aria-label="Search">
-            <button class="btn btn-outline-success" id="search-btn-nav" type="submit"><i class="bi bi-search"></i></button>
-          </form>
+
         </div>
       </div>
     </div>

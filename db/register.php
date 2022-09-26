@@ -18,9 +18,9 @@ include('conn.php');
 
 $sql = "INSERT INTO `users` (username, email, password, user_type_id) VALUES ('$username', '$email', MD5('$password1'),2)";
 
-if ($conn->query($sql) === TRUE) 
-    header('Location: ../index.php?p=login&r=regok');
+if($conn->query($sql) === TRUE)
+    header('Location: ../index.php?p=login&r=registook');
 else
-    header('Location: ../index.php?p=register&r=regerror');
+    header('Location: ../index.php?p=registo&r=regerror');
 $conn->close();
 ?>

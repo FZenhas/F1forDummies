@@ -1,3 +1,4 @@
+/* QUIZZ USERS */
 var respostas = {};
 
 var pergunta1 = document.getElementById('question-1');
@@ -113,6 +114,7 @@ function escolherResposta(nrPergunta){
 })
 }
 
+/* NOTICIAS */
 
 function loadNews(){
     var setint = setInterval(function(){
@@ -127,6 +129,7 @@ function loadNews(){
     },3000);    //executar de 10s em 10s
 }
 
+/* CRUD USERS */
 var username;
 function account_edit(){
     document.getElementById('account_btn_edit').style.display='none'
@@ -147,4 +150,18 @@ function account_edit(){
 
 function account_cancel(){
     window.location.replace("index.php?p=minhaconta")
+}
+
+
+/* UPDATE DRIVERS */
+function drivers_ranking_edit(id){
+    document.getElementById('drivers-points-btn-edit-'+id).style.display='none'
+    document.getElementById('input-points-'+id).style.display='inline'
+    document.getElementById('save-btn-points-'+id).style.display='inline'
+}
+
+function drivers_ranking_save(id){
+    document.getElementById('drivers-points-btn-edit-'+id).style.display='inline'
+    document.getElementById('input-points-'+id).readOnly = true;
+    document.getElementById('save-btn-points-'+id).style.display='none'
 }

@@ -25,7 +25,6 @@ if ($result->num_rows > 0) {
                         <a href="<?= $row['url_ig'] ?>" target="_blank>" i class="bi bi-instagram"></a>
                         <br>
                         <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="<?= $row['curiosity'] ?>">
-
                             <button class="btn btn-success" type="button">Sabia que...</button>
                         </span>
                     </div>

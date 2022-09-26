@@ -31,7 +31,7 @@ if ($result->num_rows == 1) {
 
     header('Location: ../index.php?p=paginainicial');
 } else {
-    header('Location: ../index.php?p=login&r=invalid');
+    header('Location: ../index.php?p=login&r=loginerrado');
 }
 $conn->close();
 ?>

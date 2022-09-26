@@ -16,7 +16,6 @@ if ($result->num_rows > 0) {
   ?>
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center">
-          </p>
           <p><?= $position ?></p>
           <?= $row['driver_name'] ?>
           #<?= $row['number'] ?>

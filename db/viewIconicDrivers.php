@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
 
 $text_class = '';
 
-if($counter == 1){ 
+if($counter == 1){
     $text_class = 'carousel-item active';
 }else{
     $text_class = 'carousel-item';

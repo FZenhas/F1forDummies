@@ -43,7 +43,7 @@ header{
 }
 
 #search{
-    width: 38%;
+    width: 45%;
     margin: auto;
     padding: 5px;
 }
@@ -516,3 +516,18 @@ footer i:hover{
     width: 150px;
     height: 150px;
 }
+
+
+#input-points-1,#input-points-2,#input-points-3,#input-points-4,#input-points-5,#input-points-6,#input-points-7,#input-points-8,#input-points-9,#input-points-10,#input-points-11,#input-points-12,#input-points-13,#input-points-14,#input-points-15,#input-points-16,#input-points-17,#input-points-18,#input-points-19, #input-points-20 {
+   display: none;
+}
+
+#save-btn-points-1,#save-btn-points-2,#save-btn-points-3,#save-btn-points-4,#save-btn-points-5,#save-btn-points-6,#save-btn-points-7,#save-btn-points-8,#save-btn-points-9,#save-btn-points-10,#save-btn-points-11,#save-btn-points-12,#save-btn-points-13,#save-btn-points-14,#save-btn-points-15,#save-btn-points-16,#save-btn-points-17,#save-btn-points-18,#save-btn-points-19,#save-btn-points-20 {
+    display: none;
+ }
+
+
+
+
+
+
