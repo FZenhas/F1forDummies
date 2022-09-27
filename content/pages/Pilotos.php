@@ -15,7 +15,7 @@
                 if (!isset($_GET['search']))
                     include('db/viewDriver.php');
                 else
-                    include('db/searchDrivers.php');
+                    include('db/search.php');
                 ?>
 
                 <?php
