@@ -158,10 +158,47 @@ function drivers_ranking_edit(id){
     document.getElementById('drivers-points-btn-edit-'+id).style.display='none'
     document.getElementById('input-points-'+id).style.display='inline'
     document.getElementById('save-btn-points-'+id).style.display='inline'
+    document.getElementById('ranking_btn_cancel-'+id).style.display='inline'
 }
 
 function drivers_ranking_save(id){
     document.getElementById('drivers-points-btn-edit-'+id).style.display='inline'
     document.getElementById('input-points-'+id).readOnly = true;
     document.getElementById('save-btn-points-'+id).style.display='none'
+
+}
+
+function drivers_ranking_cancel(id){
+    window.location.replace("index.php?p=administracao")
+}
+
+/* SEARCH  */
+function input_search(){
+    var text = document.getElementById('search')
+    if(text.value.length >= 2){
+    document.getElementById('search-btn-nav').disabled = false;
+    }
+    else if(text.value.length <2){
+        console.log(text.value)
+    document.getElementById('search-btn-nav').disabled = true;
+    }
+}
+
+/* UPDATE TEAMS */
+function teams_ranking_edit(id){
+    document.getElementById('teams-points-btn-edit-'+id).style.display='none'
+    document.getElementById('input-points-teams'+id).style.display='inline'
+    document.getElementById('save-btn-teams-points-'+id).style.display='inline'
+    document.getElementById('ranking_teams_btn_cancel-'+id).style.display='inline'
+}
+
+function teams_ranking_save(id){
+    document.getElementById('teams-points-btn-edit-'+id).style.display='inline'
+    document.getElementById('input-points-teams-'+id).readOnly = true;
+    document.getElementById('save-btn-teams-points-'+id).style.display='none'
+
+}
+
+function teams_ranking_cancel(id){
+    window.location.replace("index.php?p=admin-teams-ranking")
 }

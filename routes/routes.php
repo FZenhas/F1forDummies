@@ -31,10 +31,14 @@ else if($pag == 'minhaconta')
     include('content/pages/minha-conta.php');
 else if($pag == 'administracao')
     include('content/pages/administracao.php');
+    else if($pag == 'admin-teams-ranking')
+    include('content/pages/admin-teams-ranking.php');
 else if($pag == 'resetPassword')
     include('content/pages/resetPassword.php');
 else if($pag == 'logout')
     include('content/pages/logout.php');
+    else if($pag == 'calculator')
+    include('content/pages/calculator.php');
 else
     include ('content/pages/404.php');
 }else if(isset($_GET['search']))

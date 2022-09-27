@@ -2,8 +2,8 @@
   <br>
   <h1>Classificação dos Construtores 2022</h1>
   <br>
-  
 
-  <?php include('db/viewTeamsRanking.php') ?>
+
+  <?php include('db/teams/viewTeamsRanking.php') ?>
   <br>
   <p>Para saber mais sobre cada Construtor consulte esta <a href="index.php?p=Construtores"> página.</a></p>

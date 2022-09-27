@@ -1,7 +1,7 @@
 <?php
 
 define('_DEFVAR', 1);
-include('conn.php');
+include('db/conn.php');
 
 $sql = "SELECT d.driver_name, d.id, d.number, d.nationality_pic, t.logo, d.points FROM drivers d JOIN teams t ON d.team_id = t.id
 ORDER BY d.points DESC";
@@ -9,7 +9,7 @@ ORDER BY d.points DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) { ?>
-<form action="db/updateDriversRanking.php" method="post">
+<form action="db/drivers/updateDriversRanking.php" method="post">
     <thead>
         <tr>
             <th scope="col">Posição</th>
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) { ?>
     $position = 1;
     while ($row = $result->fetch_assoc()) {
     ?>
-    <form action="db/updateDriversRanking.php" method="post">
+    <form action="db/drivers/updateDriversRanking.php" method="post">
         <tbody>
             <tr>
                 <th scope="row"><?= $position ?></th>
@@ -48,7 +48,7 @@ if ($result->num_rows > 0) { ?>
                         <option value=<?= $row['points'] ?>+1>10º lugar: 1</option>
                         <option value=<?= $row['points'] ?>+1>Fastest lap: 1</option>
                     </select></td>
-                    <td><button id="ranking_btn_cancel-<?= $row['id'] ?>" type="button" class="btn btn-danger" onclick="account_cancel()">Cancel</button></td>
+                    <td><button id="ranking_btn_cancel-<?= $row['id'] ?>" type="button" class="btn btn-danger" onclick="drivers_ranking_cancel()">Cancel</button></td>
                 <td><button type="submit" id="save-btn-points-<?= $row['id'] ?>" class="btn btn-primary" onclick="drivers_ranking_save(<?= $row['id'] ?>)">Salvar</button></td>
                 <td><input id="input-id" name="input-id" value="<?= $row['id'] ?>"></input></td>
             </tr>

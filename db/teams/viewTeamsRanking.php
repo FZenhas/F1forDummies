@@ -1,7 +1,7 @@
 <?php
 
 define('_DEFVAR', 1);
-include('conn.php');
+include('db/conn.php');
 
 $sql = "SELECT team_name, logo, points FROM teams ORDER by points DESC";
 
@@ -15,7 +15,7 @@ if($result ->num_rows > 0){
 <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center">
     <?=$position?>. <?=$row['team_name']?>
-    <img src="<?=$row['logo']?>" width="10%" alt=""> 
+    <img src="<?=$row['logo']?>" width="10%" alt="">
     <span class="badge bg-dark rounded-pill"><?=$row['points']?></span>
     </li>
 </ul>

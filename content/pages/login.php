@@ -2,7 +2,7 @@
 
 <h1>Login</h1>
 
-<form action="db/login.php" method="post">
+<form action="db/users/login.php" method="post">
   <div class="mb-3">
     <label for="form-username" class="form-label">Username</label>
     <input type="text" class="form-control" id="form-username" name="form-username" autocomplete="form-username" placeholder="Escreva o seu username" required>
@@ -32,13 +32,13 @@ if(isset($_GET['r'])){
     <?php
   }else if($r == 'empty'){ ?>
 
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-dark" role="alert">
       Preencha todos os campos para se autenticar
     </div>
 
     <?php
   }else if($r == 'loginerrado'){ ?>
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-dark" role="alert">
       Login Errado
     </div>
 

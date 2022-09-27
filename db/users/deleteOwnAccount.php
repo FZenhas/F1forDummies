@@ -8,14 +8,14 @@ $id = $_SESSION['id'];
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
-include('conn.php');
+include('../conn.php');
 
 $sql = "UPDATE `users` SET visibility = 0 WHERE id=$id";
 
 if ($conn->query($sql) === TRUE)
-    header('Location: ../index.php?p=logout');
+    header('Location: ../../index.php?p=logout');
 else
-    header('Location: ../index.php?p=minhaconta&r=deleteerror');
+    header('Location: ../../index.php?p=minhaconta&r=deleteerror');
 $conn->close();
 ?>
 

@@ -48,27 +48,21 @@ if ($result->num_rows > 0) {
     }
 }
 
-        $sql = "SELECT t.team_name, t.full_team_name, t.location, t.team_chief, t.motor, t.world_championships, t.logo, t.car_pic, t.url_site, t.url_ig, t.team_name,
-GROUP_CONCAT(DISTINCT d.driver_name SEPARATOR ', ') AS drivers
-FROM teams t
-JOIN drivers d
-ON t.id = d.team_id
-WHERE d.visibility=1 AND t.team_name LIKE '%$param%'";
+$sql = "SELECT team_name, full_team_name, location,  team_chief, motor, world_championships, logo, car_pic, url_site, url_ig, team_name
+FROM teams
+WHERE team_name LIKE '%$param%'";
 
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                if ($row['team_name'] != NULL) {
 
-                $split_drivers_array = explode(",", $row['drivers']);
             ?>
         <div class="col-12 col-md-6 col-lg-4 mb-2">
             <div id="construtores" class="card" style="width: 18rem;">
                 <img src="<?= $row['logo'] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $row['team_name'] ?></h5>
-                    <p class="card-text"><?= $split_drivers_array[0] ?> & <?= $split_drivers_array[1] ?></p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Nome completo: <b><?= $row['full_team_name'] ?></b></li>
@@ -88,6 +82,6 @@ WHERE d.visibility=1 AND t.team_name LIKE '%$param%'";
     <?php
             }
     ?></div><?php
-        }}
+        }
         $conn->close();
             ?>

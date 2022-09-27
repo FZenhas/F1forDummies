@@ -1,10 +1,10 @@
 <?php
-$target_dir = "../img/users/";
+$target_dir = "../../Img/users/";
 $target_file = $target_dir . "u".$_POST['form-id'].".png";
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(empty($_FILES["form-img"]["tmp_name"])){
-  header('Location: ../index.php?p=minhaconta&r=empty');
+  header('Location: ../../index.php?p=minhaconta&r=empty');
   exit();
 }
 
@@ -43,15 +43,15 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  header('Location: ../index.php?p=minhaconta&r=errorImg');
+  header('Location: ../../index.php?p=minhaconta&r=errorImg');
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["form-img"]["tmp_name"], $target_file)) {
     //echo "The file ". htmlspecialchars( basename( $_FILES["form-img"]["name"])). " has been uploaded.";
     include('updateImgUser.php');
-    header('Location: ../index.php?p=minhaconta&r=okImg');
+    header('Location: ../../index.php?p=minhaconta&r=okImg');
   } else {
-    header('Location: ../index.php?p=minhaconta&r=errorImg');
+    header('Location: ../../index.php?p=minhaconta&r=errorImg');
   }
 }
 ?>

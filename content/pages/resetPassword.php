@@ -3,7 +3,7 @@
 <h1>Reset Password</h1>
 
 <br>
-<form action="db/resetPassword.php" method="get">
+<form action="db/users/resetPassword.php" method="get">
 <div class="mb-3">
     <label for="form-email" class="form-label">Para redefinir a sua senha, insira o seu username ou email</label>
     <input type="text" class="form-control" name="form-email" id="form-email">

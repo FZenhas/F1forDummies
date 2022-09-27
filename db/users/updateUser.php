@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION['id']) || empty($_POST['form-username']) || /*empty($_POST['form-password']) ||*/ empty($_POST['form-email'])){
-    header('Location: ../index.php?p=minhaconta&r=empty');
+    header('Location: ../../index.php?p=minhaconta&r=empty');
     exit();
 }
 $id = $_SESSION['id'];
@@ -15,7 +15,7 @@ $email = $_POST['form-email'];
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
-include('conn.php');
+include('db/conn.php');
 
 if(!empty($_POST['form-password']))
     $sql = "UPDATE `users` SET username='$username', password=MD5('$password'), email='$email' WHERE id=$id";
@@ -24,9 +24,9 @@ else
 
 if ($conn->query($sql) === TRUE) {
     $_SESSION['username']=$username;
-    header('Location: ../index.php?p=minhaconta&r=editok');
+    header('Location: ../../index.php?p=minhaconta&r=editok');
 }
 else
-    header('Location: ../index.php?p=minhaconta&r=editerror');
+    header('Location: ../../index.php?p=minhaconta&r=editerror');
 $conn->close();
 ?>

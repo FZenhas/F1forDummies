@@ -1,7 +1,7 @@
 <?php
 
 define('_DEFVAR', 1);
-include('conn.php');
+include('db/conn.php');
 
 $sql = "SELECT d.driver_name, d.number, d.nationality_pic, t.logo, d.points FROM drivers d JOIN teams t ON d.team_id = t.id
 ORDER BY d.points DESC";

@@ -6,13 +6,23 @@ if($_SESSION['type']!=1){
     exit();
 }?>
 
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="index.php?p=administracao">Update Classificação Pilotos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="index.php?p=admin-teams-ranking">Update Classificação Construtores</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Update Resultados das Corridas</a>
+  </li>
+</ul>
 
-<h1>Admin</h1>
-
+<br>
 <div class="container">
-    <div class="col text-center"><h2>Pilotos</h2></div>
-    <table class="table table-striped"><?php include('db/getDriversRanking.php')?></table>
+    <div class="col text-center"><h1>Classificação Pilotos</h1></div>
+    <table class="table table-striped"><?php include('db/drivers/getDriversRanking.php')?></table>
 </div>
 
-<hr>
+
 

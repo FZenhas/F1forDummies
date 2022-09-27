@@ -40,8 +40,8 @@
       <div class="search-nav-bar">
         <div>
           <form class="d-flex" action="index.php">
-            <input class="form-control me-2" name="search" type="search" id="search" placeholder="pesquisar" aria-label="Search">
-            <button class="btn btn-outline-success" id="search-btn-nav" type="submit"><i class="bi bi-search"></i></button>
+            <input class="form-control me-2" name="search" type="search" id="search" placeholder="Pesquisar" aria-label="Search" onkeydown="input_search()" onchange="input_search()">
+            <button class="btn btn-outline-success" id="search-btn-nav" type="submit" disabled><i class="bi bi-search"></i></button>
           </form>
         </div>
         <div>

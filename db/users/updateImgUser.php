@@ -1,7 +1,7 @@
 <?php
 //VALIDAR SE CAMPOS FORAM PASSADOS
 if(empty($_POST['form-id'])) {
-    header('Location:../index.php?p=404');
+    header('Location:../../index.php?p=404');
     exit();
 }
 
@@ -10,14 +10,14 @@ $id = $_POST['form-id'];
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
-include('conn.php');
+include('../conn.php');
 
 $sql = "UPDATE `users` SET photo='u$id.png' WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location:../index.php?p=minhaconta&r=updateok');
+    header('Location:../../index.php?p=minhaconta&r=updateok');
 } else {
-    header('Location:../index.php?p=minhaconta&r=updateerror');
+    header('Location:../../index.php?p=minhaconta&r=updateerror');
 }
 
 $conn->close();

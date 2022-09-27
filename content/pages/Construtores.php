@@ -6,7 +6,7 @@
     <div class="row">
 
     <?php
-        include('db/viewTeams.php');
+        include('db/teams/viewTeams.php');
     ?>
 
       <p>Para saber qual a classificação atual de cada Construtor consulta esta <a href="index.php?p=Classificacao-construtores"> página.</a></p>

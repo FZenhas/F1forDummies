@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
 
-     <?php include('db/viewGP.php')?>
+     <?php include('db/grand-prix/viewGP.php')?>
 
     </div>
   </div>

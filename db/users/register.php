@@ -8,19 +8,30 @@ $email = $_POST['form-email'];
 $password1 = $_POST['form-password1'];
 $password2 = $_POST['form-password2'];
 
-if($password1!=$password2){
-    header('Location: ../index.php?p=registo&r=pwderror');
+// Validate password strength
+$uppercase = preg_match('@[A-Z]@', $password1);
+$lowercase = preg_match('@[a-z]@', $password1);
+$number    = preg_match('@[0-9]@', $password1);
+
+if(!$uppercase || !$lowercase || !$number || strlen($password1) < 8) {
+    header('Location: ../../index.php?p=registo&r=pwdnotworking');
     exit();
 }
+
+if($password1!=$password2){
+    header('Location: ../../index.php?p=registo&r=pwderror');
+    exit();
+}
+if($password1 < 8)
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
-include('conn.php');
+include('../conn.php');
 
 $sql = "INSERT INTO `users` (username, email, password, user_type_id) VALUES ('$username', '$email', MD5('$password1'),2)";
 
 if($conn->query($sql) === TRUE)
-    header('Location: ../index.php?p=login&r=registook');
+    header('Location: ../../index.php?p=login&r=registook');
 else
-    header('Location: ../index.php?p=registo&r=regerror');
+    header('Location: ../../index.php?p=registo&r=regerror');
 $conn->close();
 ?>

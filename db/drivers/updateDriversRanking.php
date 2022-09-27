@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION['id'])){
-    header('Location: ../index.php?p=administracao&r=empty');
+    header('Location: ../../index.php?p=administracao&r=empty');
     exit();
 }
 $id = $_SESSION['id'];
@@ -12,14 +12,14 @@ $points = $_POST["input-points-".$id];
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
-include('conn.php');
+include('../conn.php');
 
 $sql = "UPDATE drivers SET points=$points where id=$id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: ../index.php?p=administracao&r=editok');
+    header('Location: ../../index.php?p=administracao&r=editok');
 }
 else
-    header('Location: ../index.php?p=administracao&r=editerror');
+    header('Location: ../../index.php?p=administracao&r=editerror');
 $conn->close();
 ?>

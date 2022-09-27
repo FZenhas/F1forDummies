@@ -513,7 +513,7 @@ footer i:hover{
     height: 150px;
 }
 
-/* -------------- ADMIN ----------- */
+/* -------------- ADMIN UPDATE DRIVERS RANK----------- */
 
 #input-points-1,#input-points-2,#input-points-3,#input-points-4,#input-points-5,#input-points-6,#input-points-7,#input-points-8,#input-points-9,#input-points-10,#input-points-11,#input-points-12,#input-points-13,#input-points-14,#input-points-15,#input-points-16,#input-points-17,#input-points-18,#input-points-19, #input-points-20 {
    display: none;
@@ -528,4 +528,16 @@ footer i:hover{
 }
 
 
+#ranking_btn_cancel-1, #ranking_btn_cancel-2, #ranking_btn_cancel-3, #ranking_btn_cancel-4, #ranking_btn_cancel-5, #ranking_btn_cancel-6, #ranking_btn_cancel-7, #ranking_btn_cancel-8, #ranking_btn_cancel-9, #ranking_btn_cancel-10, #ranking_btn_cancel-11, #ranking_btn_cancel-12, #ranking_btn_cancel-13, #ranking_btn_cancel-14, #ranking_btn_cancel-15,#ranking_btn_cancel-16, #ranking_btn_cancel-17, #ranking_btn_cancel-18, #ranking_btn_cancel-19, #ranking_btn_cancel-20{
+    display: none;
+}
 
+/* -------------- ADMIN UPDATE DRIVERS RANK----------- */
+
+#input-points-teams-1,#input-points-teams-2{
+    display: none;
+}
+
+#ranking_teams_btn_cancel-1{
+    display: none;
+}
