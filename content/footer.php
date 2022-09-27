@@ -1,10 +1,10 @@
 </main>
 <footer class="container-fluid">
         <div class="row text-center">
-            <div class="col-12 col-md-12 p-3"> 
+            <div class="col-12 col-md-12 p-3">
                &copy; <?php echo date ('Y-M-d'); ?> F1 for Dummies <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i>
-               <i class="bi bi-twitter"></i> | Trabalho realizado por Filipa Zenhas
-            </div>  
+               <i class="bi bi-twitter"></i> | Coded by Filipa Zenhas
+            </div>
         </div>
     </footer>
     <!-- Popover -->

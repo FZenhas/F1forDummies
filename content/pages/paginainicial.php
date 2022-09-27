@@ -2,9 +2,9 @@
 
   <div>
 
-    <div class="container-fluid text-center w-50" id="next-race">
+    <div class="container-fluid text-center bg-dark bg-gradient w-50" id="next-race">
       <div class="row ">
-          <?php include('db/viewNextRaceCounter.php')?>
+        <?php include('db/viewNextRaceCounter.php') ?>
       </div>
     </div>
 
@@ -18,21 +18,33 @@
     <div>
       <img id="picPilotos" src="Img/Index/drivers.jpg" alt="">
     </div>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <?php include('db/viewGallery.php') ?>
+      </div>
+    </div>
+
+    <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:100%">
+      <div id="imgtext"></div>
+    </div>
   </div>
 
   <br>
 
   <?php
-//VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO
-if(isset($_GET['r'])){
-  $r = $_GET['r'];
-  if($r == 'deleteok'){ ?>
+  //VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO
+  if (isset($_GET['r'])) {
+    $r = $_GET['r'];
+    if ($r == 'deleteok') { ?>
 
-    <div class="alert alert-success" role="alert">
-      Conta eliminada com sucesso
-    </div>
+      <div class="alert alert-success" role="alert">
+        Conta eliminada com sucesso
+      </div>
 
-    <?php
+  <?php
+    }
   }
-}
-?>
+  ?>

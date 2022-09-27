@@ -202,3 +202,12 @@ function teams_ranking_save(id){
 function teams_ranking_cancel(id){
     window.location.replace("index.php?p=admin-teams-ranking")
 }
+
+
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }

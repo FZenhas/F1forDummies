@@ -14,6 +14,8 @@ DROP TABLE if EXISTS teams;
 
 DROP TABLE if EXISTS iconic_drivers;
 
+DROP TABLE IF EXISTS gallery;
+
 DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS users_type;
 
@@ -56,6 +58,23 @@ CREATE TABLE `users`(
 INSERT INTO `users`(username, email, password, user_type_id) VALUES
     ('admin', 'admin@admin.pt',MD5('admin'), 1),
     ('user', 'user@userpt', MD5('user'), 2);
+
+CREATE TABLE gallery(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    picture VARCHAR(255) NOT NULL,
+    visibility BIT DEFAULT 1
+);
+
+INSERT INTO gallery(picture) VALUES
+('Img/Gallery/2022-Bahrain-Grand-Prix.jpg'),
+('Img/Gallery/f1-2022.jpg'),
+('Img/Gallery/f1-cars.webp'),
+('Img/Gallery/toto-wolff-team-principal-and-.webp'),
+('Img/Gallery/f1-drivers-2021.jpg'),
+('Img/Gallery/f1-lineup.webp'),
+('Img/Gallery/image-F1.jpg'),
+('Img/Gallery/verstappen-pitstop-.jpg');
+
 CREATE TABLE iconic_drivers(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(60) NOT NULL,
@@ -66,7 +85,6 @@ CREATE TABLE iconic_drivers(
     world_championship INT (3) NOT NULL,
     picture VARCHAR(255) NOT NULL,
     visibility BIT DEFAULT 1
-
 );
 
 INSERT INTO iconic_drivers(name, nationality, date_of_birth, date_of_death, team, world_championship, picture) VALUES

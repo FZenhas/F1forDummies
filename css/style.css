@@ -89,12 +89,31 @@ main h5{
     padding: 5px;
     width: 100%;
 }
+#gallery{
+    border: 1px solid maroon;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+    height: 150px;
+ }
 
-#video{
-   margin: auto;
-   display: block;
-   width: 10%;
-}
+ /* Style the images inside the grid */
+    #intro-gallery img {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  #intro-gallery img:hover {
+    opacity: 1;
+  }
+
+ .closebtn{
+    top: 10px;
+    right: 15px;
+    color: black;
+    font-size: 35px;
+    cursor:pointer;
+ }
 
 /*-----------------F1-------------*/
 
