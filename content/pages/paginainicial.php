@@ -19,6 +19,11 @@
       <img id="picPilotos" src="Img/Index/drivers.jpg" alt="">
     </div>
     <br>
+    <div class="container ">
+        <div class="text-center">
+            <h2>Imagens únicas da Formula 1</h2> <br>
+        </div>
+    </div>
     <div class="container-fluid">
       <div class="row">
         <?php include('db/viewGallery.php') ?>

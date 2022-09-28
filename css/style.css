@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    background-color: #dece9c;
+    background-color: #000000;
 }
 
 /*----------------- NAV ----------------*/
@@ -24,28 +24,31 @@ header{
 }
 
 .navbar-toggler{
-    color: #dece9c;
+    color: whitesmoke;
     background-color: #cdbe8f;
 }
 
 .nav-link{
-    color: black;
-    font-variant: small-caps;
+    color: wheat;
     font-size: medium;
-    font-family: 'Rubik Dirt', cursive;
+    font-variant: small-caps;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .nav-link:hover{
-    color:#E10600;
+    color:rgba(245, 222, 179, 0.711);
 }
 #logo:hover{
-    background-color: #dece9c;
+    background-color: #000000;
 }
 
 #search{
-    width: 45%;
+    width: 55%;
     margin: auto;
     padding: 4px;
+}
+#search-btn-nav{
+    color: #E10600;
 }
 
 /*----------------- NAV LOG ----------------*/
@@ -512,7 +515,7 @@ footer i:hover{
 #news{ /* 2F5168 */
     width:20%;
     overflow:hidden;
-    background-color: #028054;
+    background-color: #E10600;
     margin: 2.5em auto;
     height: auto;
     border: 2px solid gray;
@@ -546,17 +549,37 @@ footer i:hover{
     display: none;
 }
 
-
 #ranking_btn_cancel-1, #ranking_btn_cancel-2, #ranking_btn_cancel-3, #ranking_btn_cancel-4, #ranking_btn_cancel-5, #ranking_btn_cancel-6, #ranking_btn_cancel-7, #ranking_btn_cancel-8, #ranking_btn_cancel-9, #ranking_btn_cancel-10, #ranking_btn_cancel-11, #ranking_btn_cancel-12, #ranking_btn_cancel-13, #ranking_btn_cancel-14, #ranking_btn_cancel-15,#ranking_btn_cancel-16, #ranking_btn_cancel-17, #ranking_btn_cancel-18, #ranking_btn_cancel-19, #ranking_btn_cancel-20{
     display: none;
 }
 
-/* -------------- ADMIN UPDATE DRIVERS RANK----------- */
+/* -------------- ADMIN UPDATE TEAMS RANK----------- */
 
-#input-points-teams-1,#input-points-teams-2{
+#input-points-teams-1,#input-points-teams-2, #input-points-teams-3, #input-points-teams-4, #input-points-teams-5, #input-points-teams-6, #input-points-teams-7, #input-points-teams-8, #input-points-teams-9, #input-points-teams-10 {
     display: none;
 }
 
-#ranking_teams_btn_cancel-1{
+#ranking_teams_btn_cancel-1, #ranking_teams_btn_cancel-2, #ranking_teams_btn_cancel-3, #ranking_teams_btn_cancel-4, #ranking_teams_btn_cancel-5, #ranking_teams_btn_cancel-6, #ranking_teams_btn_cancel-7, #ranking_teams_btn_cancel-8, #ranking_teams_btn_cancel-9, #ranking_teams_btn_cancel-10{
+    display: none;
+}
+
+#save-btn-teams-points-1,#save-btn-teams-points-2,#save-btn-teams-points-3,#save-btn-teams-points-4,#save-btn-teams-points-5,#save-btn-teams-points-6,#save-btn-teams-points-7,#save-btn-teams-points-8,#save-btn-teams-points-9,#save-btn-teams-points-10{
+    display: none;
+}
+
+/* -------------- ADMIN UPDATE RESULTS----------- */
+
+#save-btn-gp-1, #save-btn-gp-2, #save-btn-gp-3, #save-btn-gp-4, #save-btn-gp-5, #save-btn-gp-6,#save-btn-gp-7,#save-btn-gp-8,#save-btn-gp-9,#save-btn-gp-10,#save-btn-gp-11,#save-btn-gp-12,#save-btn-gp-13,#save-btn-gp-14,#save-btn-gp-15,#save-btn-gp-16,#save-btn-gp-17,#save-btn-gp-18,#save-btn-gp-19,#save-btn-gp-20, #save-btn-gp-21,#save-btn-gp-22{
+    display: none;
+}
+
+#gp_btn_cancel-1,#gp_btn_cancel-2,#gp_btn_cancel-3,#gp_btn_cancel-4,#gp_btn_cancel-5,#gp_btn_cancel-6,#gp_btn_cancel-7,#gp_btn_cancel-8,#gp_btn_cancel-9,#gp_btn_cancel-10,#gp_btn_cancel-11,#gp_btn_cancel-12,#gp_btn_cancel-13,#gp_btn_cancel-14,#gp_btn_cancel-15,#gp_btn_cancel-16,#gp_btn_cancel-17,#gp_btn_cancel-18,#gp_btn_cancel-19,#gp_btn_cancel-20,#gp_btn_cancel-21,#gp_btn_cancel-22 {
+    display: none;
+}
+
+#input-podium-1,#input-podium-2,#input-podium-3{
+    display: none;
+}
+#results-input-id{
     display: none;
 }

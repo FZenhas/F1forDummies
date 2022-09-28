@@ -4,9 +4,9 @@ define('_DEFVAR', 1);
 include('conn.php');
 
 $sql = "SELECT gp.name, gp.country_image, gp.country, gp.start_date, gp.end_date, DATEDIFF(gp.start_date, CURRENT_TIMESTAMP) as time FROM grand_prix gp
-JOIN results r 
+JOIN results r
 ON gp.id = r.grand_prix_id
-WHERE r.driver_position = 0 LIMIT 1";
+WHERE r.driver_id is null LIMIT 1";
 
 $result = $conn->query($sql);
 
@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) { ?>
     <div class="col-sm-12">
-        <img class="next-race-img" src="<?= $row['country_image'] ?>"  alt=""> 
+        <img class="next-race-img" src="<?= $row['country_image'] ?>"  alt="">
         <p>Próxima corrida #17 <b><?= $row['country'] ?></b></p>
         <button id="race-time"><i class="bi bi-clock-fill" id="clock"></i> </i>Faltam: <b><?= $row['time'] ?> dias</b></button>
         <p><b><?= $row['name'] ?> </b></p>

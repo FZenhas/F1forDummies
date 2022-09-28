@@ -2,13 +2,13 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="index.php?p=administracao">Classificação Pilotos</a>
+    <a class="nav-link" aria-current="page" href="index.php?p=administracao">Upadate Classificação Pilotos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="index.php?p=admin-teams-ranking">Classificação Construtores</a>
+    <a class="nav-link active" href="index.php?p=admin-teams-ranking">Upadate Classificação Construtores</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="#">Update Resultado Corridas</a>
+    <a class="nav-link " href="index.php?p=admin-race-results">Update Resultado Corridas</a>
   </li>
 
 </ul>
@@ -16,6 +16,6 @@
 <br>
 
 <div class="container">
-    <div class="col text-center"><h1>Classificação Equipas</h1></div>
+    <div class="col text-center"><h1>Classificação Construtores</h1></div>
     <table class="table table-striped"><?php include('db/teams/getTeamsRanking.php')?></table>
 </div>

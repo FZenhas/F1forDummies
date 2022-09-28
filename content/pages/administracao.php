@@ -14,7 +14,7 @@ if($_SESSION['type']!=1){
     <a class="nav-link" href="index.php?p=admin-teams-ranking">Update Classificação Construtores</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Update Resultados das Corridas</a>
+    <a class="nav-link" href="index.php?p=admin-race-results">Update Resultado Corridas</a>
   </li>
 </ul>
 

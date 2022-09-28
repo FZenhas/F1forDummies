@@ -187,7 +187,7 @@ function input_search(){
 /* UPDATE TEAMS */
 function teams_ranking_edit(id){
     document.getElementById('teams-points-btn-edit-'+id).style.display='none'
-    document.getElementById('input-points-teams'+id).style.display='inline'
+    document.getElementById('input-points-teams-'+id).style.display='inline'
     document.getElementById('save-btn-teams-points-'+id).style.display='inline'
     document.getElementById('ranking_teams_btn_cancel-'+id).style.display='inline'
 }
@@ -203,7 +203,7 @@ function teams_ranking_cancel(id){
     window.location.replace("index.php?p=admin-teams-ranking")
 }
 
-
+/* PHOTO GALLERY */
 function myFunction(imgs) {
     var expandImg = document.getElementById("expandedImg");
     var imgText = document.getElementById("imgtext");
@@ -211,3 +211,22 @@ function myFunction(imgs) {
     imgText.innerHTML = imgs.alt;
     expandImg.parentElement.style.display = "block";
   }
+
+  /* UPDATE RESULTS */
+function gp_edit(id){
+    document.getElementById('gp-btn-edit-'+id).style.display='none'
+    document.getElementById('input-podium-'+id).style.display='inline'
+    document.getElementById('save-btn-gp-'+id).style.display='inline'
+    document.getElementById('gp_btn_cancel-'+id).style.display='inline'
+}
+
+function gp_save(id){
+    document.getElementById('gp-btn-edit-'+id).style.display='inline'
+    document.getElementById('input-podium-'+id).readOnly = true;
+    document.getElementById('save-btn-gp-'+id).style.display='none'
+
+}
+
+function gp_cancel(id){
+    window.location.replace("index.php?p=admin-race-results")
+}

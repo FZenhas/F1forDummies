@@ -8,7 +8,6 @@
     <input type="text" class="form-control" id="form-username" name="form-username" autocomplete="form-username" placeholder="Escreva o seu username" required>
   </div>
 
-
   <div class="mb-3">
     <label for="form-password" class="form-label">Password</label>
     <input type="password" class="form-control" id="form-password" name="form-password" placeholder="Escreva a sua password" required>
@@ -26,14 +25,14 @@ if(isset($_GET['r'])){
   if($r == 'registook'){ ?>
 
     <div class="alert alert-success" role="alert">
-      Registo efetuado com sucesso, faça login
+      Registo efetuado com sucesso. Faça login.
     </div>
 
     <?php
   }else if($r == 'empty'){ ?>
 
     <div class="alert alert-dark" role="alert">
-      Preencha todos os campos para se autenticar
+      Preencha todos os campos para se autenticar.
     </div>
 
     <?php

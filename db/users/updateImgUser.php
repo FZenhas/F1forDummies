@@ -7,6 +7,7 @@ if(empty($_POST['form-id'])) {
 
 //LER PARA VARIÁVEIS
 $id = $_POST['form-id'];
+$_SESSION['data']= "u".$id.".png";
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
