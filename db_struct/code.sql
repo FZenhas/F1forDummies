@@ -46,7 +46,9 @@ VALUES (
 CREATE TABLE
     users_type(
         id INT PRIMARY KEY AUTO_INCREMENT,
-        description VARCHAR(255)
+        description VARCHAR(255),
+        updated_at datetime,
+        visibility BIT DEFAULT 1
     );
 
 INSERT INTO

@@ -43,14 +43,14 @@ if ($result->num_rows > 0) { ?>
                         <td><?= $row['driver_position'] ?> - <?= $row['driver_name'] ?> </td>
                         <td><button id="gp-btn-edit-<?= $position ?>" type="button" class="btn btn-primary" onclick="gp_edit(<?= $position ?>)">Edit</button></td>
                         <?php if ($result_drivers->num_rows > 0) {?>
-                            <td><select type="text" id="input-podium-<?= $position ?>" name="input-podium-<?= $row['result_id'] ?>" width="10px">
+                            <td><select class="form-select" type="text" id="input-podium-<?= $position ?>" name="input-podium-<?= $row['result_id'] ?>" width="10px">
                            <?php while ($row2 = $result_drivers->fetch_assoc()) {
                                 ?>
                                     <option value="<?= $row2['id'] ?>"><?= $row2['driver_name'] ?></option>
                                     <?php }} ?>
                                 </select></td>
                                 <td><button id="gp_btn_cancel-<?= $position ?>" type="button" class="btn btn-danger" onclick="gp_cancel()">Cancel</button></td>
-                                <td><button type="submit" id="save-btn-gp-<?= $position ?>" class="btn btn-primary" onclick="gp_save(<?= $row['id'] ?>)">Salvar</button></td>
+                                <td><button type="submit" id="save-btn-gp-<?= $position ?>" class="btn btn-success" onclick="gp_save(<?= $row['id'] ?>)">Salvar</button></td>
                                 <td><input id="results-input-id" name="results-input-id" value="<?= $row['result_id'] ?>" hidden></input></td>
                     </tr>
                 </tbody>

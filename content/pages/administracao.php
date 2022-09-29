@@ -16,12 +16,15 @@ if($_SESSION['type']!=1){
   <li class="nav-item">
     <a class="nav-link" href="index.php?p=admin-race-results">Update Resultado Corridas</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="index.php?p=admin-news">Update News</a>
+  </li>
 </ul>
 
 <br>
 <div class="container">
     <div class="col text-center"><h1>Classificação Pilotos</h1></div>
-    <table class="table table-striped"><?php include('db/drivers/getDriversRanking.php')?></table>
+    <table class="table table-striped table-dark"><?php include('db/drivers/getDriversRanking.php')?></table>
 </div>
 
 

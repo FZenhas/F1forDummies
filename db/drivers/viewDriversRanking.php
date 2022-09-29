@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 
 
 if ($result->num_rows > 0) {
-?><div id="classificacao" class="col-12 col-md-8"><?php
+?><div id="classificacao" class="table table-striped table-hover"><?php
   $position = 1;
   while ($row = $result->fetch_assoc()) {
   ?>

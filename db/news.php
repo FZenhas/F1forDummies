@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 define('_DEFVAR', 1);
 include('conn.php');

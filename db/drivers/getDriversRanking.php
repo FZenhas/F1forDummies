@@ -35,7 +35,7 @@ if ($result->num_rows > 0) { ?>
                 <td><img src="<?= $row['logo'] ?>" width="30px" alt=""></td>
                 <td><?= $row['points'] ?></td>
                 <td><button id="drivers-points-btn-edit-<?= $row['id'] ?>" type="button" class="btn btn-primary" onclick="drivers_ranking_edit(<?= $row['id'] ?>)">Edit</button></td>
-                <td><select type="text" id="input-points-<?= $row['id'] ?>" name="input-points-<?= $row['id'] ?>" width="10px">
+                <td><select class="form-select" type="text" id="input-points-<?= $row['id'] ?>" name="input-points-<?= $row['id'] ?>" width="10px">
                         <option value=<?= $row['points'] ?>+25>1º lugar: 25</option>
                         <option value=<?= $row['points'] ?>+18>2º lugar: 18</option>
                         <option value=<?= $row['points'] ?>+15>3º lugar: 15</option>
@@ -49,7 +49,7 @@ if ($result->num_rows > 0) { ?>
                         <option value=<?= $row['points'] ?>+1>Fastest lap: 1</option>
                     </select></td>
                     <td><button id="ranking_btn_cancel-<?= $row['id'] ?>" type="button" class="btn btn-danger" onclick="drivers_ranking_cancel()">Cancel</button></td>
-                <td><button type="submit" id="save-btn-points-<?= $row['id'] ?>" class="btn btn-primary" onclick="drivers_ranking_save(<?= $row['id'] ?>)">Salvar</button></td>
+                <td><button type="submit" id="save-btn-points-<?= $row['id'] ?>" class="btn btn-success" onclick="drivers_ranking_save(<?= $row['id'] ?>)">Salvar</button></td>
                 <td><input id="input-id" name="input-id" value="<?= $row['id'] ?>"></input></td>
             </tr>
         </tbody>

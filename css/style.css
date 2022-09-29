@@ -48,7 +48,7 @@ header{
     padding: 4px;
 }
 #search-btn-nav{
-    color: #E10600;
+    background-color: wheat ;
 }
 
 /*----------------- NAV LOG ----------------*/
@@ -83,6 +83,40 @@ main h5{
 .container{
     border: none;
     background-color: white;
+}
+
+/* ----------- LOGIN / REGISTER-------------*/
+
+.pwd-forgotten{
+    float: right;
+}
+
+.pwd-forgotten a{
+    text-decoration: underline 2px maroon ;
+    color:black;
+    font-weight: bold;
+}
+
+.start-register a{
+    text-decoration: underline 2px maroon ;
+    color:black;
+    font-weight: bold;
+}
+.log-reg-box{
+    padding: 5px;
+    border-style:hidden;
+    border-radius: 5px;
+    background-color: #ede9dd;
+}
+
+.reg-back-intro{
+    float: right;
+}
+
+.reg-back-intro a{
+    text-decoration: underline 2px maroon ;
+    color:black;
+    font-weight: bold;
 }
 
 /*------------------ PAG INICIAL --------------*/
@@ -212,6 +246,7 @@ main h5{
 /*-------------- CLASSIFICACAO---------------*/
 #classificacao{
     margin: auto;
+    width: 70%;
 }
 
 /*--------------- CONSTRUTORES E CIRCUITO -------------*/
@@ -248,8 +283,7 @@ main h5{
 }
 
 .card:hover{
-    background-color: white;
-    color: #000000;
+    background-color: rgba(0, 0, 0, 0.682);
 }
 
 .card-title{
@@ -257,8 +291,9 @@ main h5{
     font-size: medium;
     text-align: center;
     text-transform: uppercase;
-    color: rgb(194, 16, 16);
+    color: maroon;
 }
+
 .card-text{
     text-align: center;
     line-height: 10px;
@@ -279,16 +314,21 @@ main h5{
 }
 
  #circuito:hover {
-    box-shadow: 4px 3px 3px rgba(186, 0, 0, 0.5);
+    box-shadow: 5px 3px 3px rgba(186, 0, 0, 0.5);
  }
 
 .podium-border{
-    border: 1px rgb(194, 16, 16);
+    border: 2px maroon;
     border-style: solid;
     border-radius: 4px;
     padding: 10px;
 }
-
+#btn-gp{
+    font-weight: bold;
+    font-variant: small-caps;
+    background-color: rgb(182, 194, 127);
+    color: black;
+}
 /*----------- PIT STOP -------------------*/
 
 #img-pitstop{
@@ -300,12 +340,7 @@ main h5{
 
 /*------------- PILOTOS ICONICOS--------------*/
 
-.btn{
-    font-weight: bold;
-    font-variant: small-caps;
-    background-color: rgb(182, 194, 127);
-    color: black;
-}
+
 
 .carousel{
     width: 80%;
@@ -582,4 +617,19 @@ footer i:hover{
 }
 #results-input-id{
     display: none;
+}
+
+
+/*-------CRUD NEWS ----------*/
+
+.back-intro{
+    float: right;
+    margin-right: 15px;
+   
+}
+
+.back-intro a{
+    text-decoration: underline 2px maroon ;
+    color:black;
+    font-weight: bold;
 }

@@ -35,6 +35,10 @@ else if($pag == 'admin-teams-ranking')
     include('content/pages/admin-teams-ranking.php');
 else if($pag == 'admin-race-results')
     include('content/pages/admin-race-results.php');
+else if($pag == 'admin-news')
+    include('content/pages/admin-news.php');
+    else if($pag == 'form-news')
+    include('content/pages/form-news.php');
 else if($pag == 'resetPassword')
     include('content/pages/resetPassword.php');
 else if($pag == 'logout')

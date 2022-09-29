@@ -172,17 +172,6 @@ function drivers_ranking_cancel(id){
     window.location.replace("index.php?p=administracao")
 }
 
-/* SEARCH  */
-function input_search(){
-    var text = document.getElementById('search')
-    if(text.value.length >= 2){
-    document.getElementById('search-btn-nav').disabled = false;
-    }
-    else if(text.value.length <2){
-        console.log(text.value)
-    document.getElementById('search-btn-nav').disabled = true;
-    }
-}
 
 /* UPDATE TEAMS */
 function teams_ranking_edit(id){
@@ -203,17 +192,8 @@ function teams_ranking_cancel(id){
     window.location.replace("index.php?p=admin-teams-ranking")
 }
 
-/* PHOTO GALLERY */
-function myFunction(imgs) {
-    var expandImg = document.getElementById("expandedImg");
-    var imgText = document.getElementById("imgtext");
-    expandImg.src = imgs.src;
-    imgText.innerHTML = imgs.alt;
-    expandImg.parentElement.style.display = "block";
-  }
-
-  /* UPDATE RESULTS */
-function gp_edit(id){
+  /* UPDATE GP RESULTS */
+  function gp_edit(id){
     document.getElementById('gp-btn-edit-'+id).style.display='none'
     document.getElementById('input-podium-'+id).style.display='inline'
     document.getElementById('save-btn-gp-'+id).style.display='inline'
@@ -230,3 +210,27 @@ function gp_save(id){
 function gp_cancel(id){
     window.location.replace("index.php?p=admin-race-results")
 }
+
+
+/* PHOTO GALLERY */
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+  }
+
+
+/* SEARCH  */
+function input_search(){
+    var text = document.getElementById('search')
+    if(text.value.length >= 2){
+    document.getElementById('search-btn-nav').disabled = false;
+    }
+    else if(text.value.length <2){
+        console.log(text.value)
+    document.getElementById('search-btn-nav').disabled = true;
+    }
+}
+

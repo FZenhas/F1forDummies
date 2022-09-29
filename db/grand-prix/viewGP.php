@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
         <p class="card-text"><small class="text-muted">Upcoming</small></p>
       <?php } else { ?>
         <p>
-          <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#vencedores<?= $btn_id ?>" aria-expanded="false" aria-controls="vencedores<?= $btn_id ?>"> Pódio GP F1</button>
+          <button class="btn" id="btn-gp" type="button" data-bs-toggle="collapse" data-bs-target="#vencedores<?= $btn_id ?>" aria-expanded="false" aria-controls="vencedores<?= $btn_id ?>"> Pódio GP F1</button>
         </p>
         <div class="collapse" id="vencedores<?= $btn_id ?>">
           <div class="podium-border">
