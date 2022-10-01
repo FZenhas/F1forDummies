@@ -22,7 +22,12 @@
                             } ?>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="index.php?p=minhaconta">Configurações conta</a></li>
+                            <li>
+                                <a class="dropdown-item" href="index.php?p=minhaconta">Configurações conta</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="index.php?p=forum">Forum</a>
+                            </li>
                             <?php if (!empty($_SESSION['type']) && $_SESSION['type'] == 1) { //utilizador administrador
                             ?>
                                 <li>

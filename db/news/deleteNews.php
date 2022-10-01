@@ -1,6 +1,6 @@
 <?php
 if(!isset($_GET['id'])){
-    header('Location: ../../index.php?p=admin-news&r=empty');
+    header('Location: ../../index.php?p=admin-news&r=emptynews');
     exit();
 }
 $id = $_GET['id'];
@@ -12,8 +12,8 @@ include('../conn.php');
 $sql = "DELETE FROM news WHERE id=$id";
 
 if ($conn->query($sql) === TRUE)
-    header('Location: ../../index.php?p=admin-news&r=deleteok');
+    header('Location: ../../index.php?p=admin-news&r=deletenewsok');
 else
-    header('Location: ../../index.php?p=admin-news&r=deleteerror');
+    header('Location: ../../index.php?p=admin-news&r=deletenewserror');
 $conn->close();
 ?>

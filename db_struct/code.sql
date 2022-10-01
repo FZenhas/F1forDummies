@@ -16,33 +16,13 @@ DROP TABLE if EXISTS iconic_drivers;
 
 DROP TABLE IF EXISTS gallery;
 
-DROP TABLE IF EXISTS `users`;
-
-DROP TABLE IF EXISTS users_type;
+DROP TABLE IF EXISTS posts;
 
 DROP TABLE IF EXISTS news;
 
-CREATE TABLE
-    news (
-        id INT PRIMARY KEY AUTO_INCREMENT,
-        text VARCHAR(255),
-        visibility BIT DEFAULT 1
-    );
+DROP TABLE IF EXISTS `users`;
 
-INSERT INTO news(text)
-VALUES (
-        'Oficial: Tsunoda fica na AlphaTauri e há menos uma vaga na F1'
-    ), (
-        'F1: Hamilton sobre reforma: "Eu amo o que faço e não pretendo parar tão cedo"'
-    ), (
-        'Horner admite arrependimento por ter perdido a oportunidade de integrar Piastri na academia da Red Bull'
-    ), (
-        'Mónaco permanece no calendário da Fórmula 1 até 2025'
-    ), (
-        'Binotto admite que a Ferrari precisa de melhorar e fazer alterações para voltar aos títulos'
-    ), (
-        'Horner admite arrependimento por ter perdido a oportunidade de integrar Piastri na academia da Red Bull'
-    );
+DROP TABLE IF EXISTS users_type;
 
 CREATE TABLE
     users_type(
@@ -52,9 +32,7 @@ CREATE TABLE
         visibility BIT DEFAULT 1
     );
 
-INSERT INTO
-    users_type (description)
-VALUES ('admin'), ('user');
+INSERT INTO users_type (description) VALUES ('admin'), ('user');
 
 CREATE TABLE
     `users`(
@@ -72,18 +50,77 @@ INSERT INTO
     `users`(
         username,
         email,
+        photo,
         password,
         user_type_id
     )
 VALUES (
         'admin',
         'admin@admin.pt',
+        'admin-pic.jpg',
         MD5('admin'),
         1
-    ), (
+    ),
+    (
         'user',
         'user@userpt',
+        'ayrton-senna.jpg',
         MD5('user'),
+        2
+    );
+
+CREATE TABLE
+    news (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        text VARCHAR(255) NOT NULL,
+        user_id INT,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    );
+
+INSERT INTO
+    news(text, user_id)
+VALUES (
+        'Oficial: Tsunoda fica na AlphaTauri e há menos uma vaga na F1',
+        1
+    ), (
+        'F1: Hamilton sobre reforma: "Eu amo o que faço e não pretendo parar tão cedo"',
+        1
+    ), (
+        'Horner admite arrependimento por ter perdido a oportunidade de integrar Piastri na academia da Red Bull',
+        1
+    ), (
+        'Mónaco permanece no calendário da Fórmula 1 até 2025',
+        1
+    ), (
+        'Binotto admite que a Ferrari precisa de melhorar e fazer alterações para voltar aos títulos',
+        1
+    ), (
+        'Horner admite arrependimento por ter perdido a oportunidade de integrar Piastri na academia da Red Bull',
+        1
+    );
+
+CREATE TABLE
+    posts(
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        text VARCHAR(700) NOT NULL,
+        posted_at datetime,
+        user_id INT,
+        FOREIGN KEY (user_id) REFERENCES users(id)
+    );
+
+INSERT INTO
+    posts(text, posted_at, user_id)
+VALUES (
+        'Este ano não há hipótese. O Max vai ganhar fácil!',
+        '2022-10-01 19:30:10',
+        1
+    ), (
+        'O circuito de singatura é brutal!',
+        '2022-10-01 18:30:10',
+        2
+    ), (
+        'Será que o Latifi consegue levar um pontinho para casa? :D',
+        '2022-10-01 03:30:10',
         2
     );
 

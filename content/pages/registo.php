@@ -12,14 +12,14 @@
       <div class="mb-3">
         <label for="form-email" class="form-label">Email</label>
         <input type="email" class="form-control" name="form-email" autocomplete="form-email" id="form-email" placeholder="Escreva o seu email" aria-describedby="passwordHelpBlock" required>
-        <div id="passwordHelpBlock" class="form-text">
-          A sua password deve conter pelo menos 8 caracteres, e deve incluir pelo menos uma letra maiúscula e um número.
-        </div>
       </div>
 
       <div class="mb-3">
         <label for="form-password1" class="form-label">Password</label>
         <input type="password" class="form-control" id="form-password1" name="form-password1" placeholder="Escreva a sua password" required>
+        <div id="passwordHelpBlock" class="form-text">
+          A sua password deve conter pelo menos 8 caracteres, e deve incluir pelo menos uma letra maiúscula e um número.
+        </div>
       </div>
 
       <div class="mb-3">

@@ -139,6 +139,7 @@ function account_edit(){
     document.getElementById('account_btn_save_image').style.display='inline'
     document.getElementById('account_btn_select_img').style.display='inline'
     document.getElementById('account_btn_save_image').style.display='inline'
+    document.getElementById('form-password').value=''
 
     document.getElementById('form-username').removeAttribute('readonly')
     document.getElementById('form-password').removeAttribute('readonly')
@@ -233,4 +234,3 @@ function input_search(){
     document.getElementById('search-btn-nav').disabled = true;
     }
 }
-

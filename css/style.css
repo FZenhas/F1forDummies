@@ -55,8 +55,9 @@ header{
 /*----------------- NAV LOG ----------------*/
 
 #nav-user-photo{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 
@@ -634,4 +635,11 @@ footer i:hover{
     font-family: "Agency FB";
     color: #E4F6F8;
 }
+
+#post-pic{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
 

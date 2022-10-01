@@ -15,7 +15,7 @@ $email = $_POST['form-email'];
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);
-include('db/conn.php');
+include('../conn.php');
 
 if(!empty($_POST['form-password']))
     $sql = "UPDATE `users` SET username='$username', password=MD5('$password'), email='$email' WHERE id=$id";
