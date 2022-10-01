@@ -37,8 +37,8 @@ else if($pag == 'admin-race-results')
     include('content/pages/admin-race-results.php');
 else if($pag == 'admin-news')
     include('content/pages/admin-news.php');
-    else if($pag == 'form-news')
-    include('content/pages/form-news.php');
+    else if($pag == 'create-edit-news')
+    include('content/pages/create-edit-news.php');
 else if($pag == 'resetPassword')
     include('content/pages/resetPassword.php');
 else if($pag == 'logout')

@@ -1,14 +1,15 @@
 body{
     font-family:'Arial Narrow', Arial, sans-serif;
     text-align: justify;
-    background-color: #fdf8eb53;
+    background-image: url(../Img/bg/bg-f1.webp);
+    opacity: 0.92;
 }
 
 header{
     background-color: #000000;
 }
 
-/*----------------- NAV ----------------*/
+/*----------------- NAV ----#fdf8eb53------------*/
 .dropdown-menu{
     background-color: #dece9c;
     margin-top: 0;
@@ -57,7 +58,6 @@ header{
     width: 50px;
     height: 50px;
 }
-
 
 
 /*------------------ MAIN -----------------*/
@@ -544,21 +544,6 @@ footer i:hover{
     font-size: large;
 }
 
-/* -------------- NEWS ----------- */
-
-
-#news{ /* 2F5168 */
-    width:20%;
-    overflow:hidden;
-    background-color: #E10600;
-    margin: 2.5em auto;
-    height: auto;
-    border: 2px solid gray;
-    padding: 1.2em 0;
-    font-size: 1.5em;
-    font-family: "Agency FB";
-    color: #E4F6F8;
-}
 
 /* -------------- MINHA CONTA ----------- */
 #account_btn_cancel, #account_btn_save, #account_btn_select_img, #account_btn_save_image{
@@ -625,7 +610,7 @@ footer i:hover{
 .back-intro{
     float: right;
     margin-right: 15px;
-   
+
 }
 
 .back-intro a{
@@ -633,3 +618,20 @@ footer i:hover{
     color:black;
     font-weight: bold;
 }
+
+/* -------------- NEWS ----------- */
+
+
+#news{ /* 2F5168 */
+    width:20%;
+    overflow:hidden;
+    background-color: #E10600;
+    margin: 2.5em auto;
+    height: auto;
+    border: 2px solid gray;
+    padding: 1.2em 0;
+    font-size: 1.5em;
+    font-family: "Agency FB";
+    color: #E4F6F8;
+}
+

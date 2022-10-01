@@ -2,10 +2,11 @@
     <br>
     <h1>Classificação dos Pilotos 2022</h1>
     <br>
-
-
-
-    <?php include('db/drivers/viewDriversRanking.php')?>
+    <div class="container w-50">
+        <?php include('db/grand-prix/last-race-gp.php'); ?>
+    </div>
     <br>
-    
+    <?php include('db/drivers/viewDriversRanking.php'); ?>
+    <br>
+
     <p>Para saber mais sobre cada Piloto consulte esta <a href="index.php?p=Pilotos"> página.</a></p>

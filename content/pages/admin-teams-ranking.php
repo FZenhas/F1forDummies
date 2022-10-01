@@ -20,5 +20,23 @@
 
 <div class="container">
     <div class="col text-center"><h1>Classificação Construtores</h1></div>
+    <?php
+//VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO
+if(isset($_GET['r'])){
+  $r = $_GET['r'];
+  if($r == 'editok'){ ?>
+
+    <div class="alert alert-success" role="alert">
+      Resultado editado com sucesso.
+    </div>
+    <?php
+  }else if($r == 'editerror'){ ?>
+
+    <div class="alert alert-danger" role="alert">
+      Erro na edição dos resultados
+    </div>
+    <?php
+  }
+}?>
     <table class="table table-striped table-dark"><?php include('db/teams/getTeamsRanking.php')?></table>
 </div>

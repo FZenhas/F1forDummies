@@ -18,8 +18,25 @@
 
 <div class="container ">
 <div class="col text-center"><h1>Update news</h1></div>
+<?php
+//VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO
+if(isset($_GET['r'])){
+  $r = $_GET['r'];
+  if($r == 'editok'){ ?>
 
-<a href="index.php?p=form-news"><i class="bi bi-pencil-square" id="add-new"></i></a>
-<table class="table table-striped table-dark"><?php include('db/news/getNews.php')?></table>
+    <div class="alert alert-success" role="alert">
+      Resultado editado com sucesso.
+    </div>
+    <?php
+  }else if($r == 'editerror'){ ?>
+
+    <div class="alert alert-danger" role="alert">
+      Erro na edição dos resultados
+    </div>
+    <?php
+  }
+}?>
+<a href="index.php?p=create-edit-news"><button class="btn btn-light"><i class="bi bi-pencil-square"></i> Adicionar notícia</button></a>
+<table class="table table-striped"><?php include('db/news/getNews.php')?></table>
 
 

@@ -25,7 +25,8 @@ DROP TABLE IF EXISTS news;
 CREATE TABLE
     news (
         id INT PRIMARY KEY AUTO_INCREMENT,
-        text VARCHAR(255)
+        text VARCHAR(255),
+        visibility BIT DEFAULT 1
     );
 
 INSERT INTO news(text)
