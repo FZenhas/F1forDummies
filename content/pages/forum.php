@@ -1,6 +1,7 @@
 <main class="container border my-2 border-2 rounded shadow w-50">
     <br>
     <h1>Forum F1 4 Dummies</h1>
+    <br>
     <h2>Um espaço para partilhar todas as reflexões, polémicas, opiniões, comentários, palpites sobre as corridas, pilotos, equipas,... tudo o que quiser sobre o fantástico mundo da F1!</h2>
     <br>
 
@@ -17,7 +18,7 @@
                                 <button type="submit" class="btn btn-dark">Post</button>
                             </div>
                         </form>
-                        <?php include("db/forum/get-posts.php") ?>;
+                        <?php include("db/forum/get-posts.php") ?>
                     </div>
                 </div>
             </div>

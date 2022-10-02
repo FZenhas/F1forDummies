@@ -22,4 +22,3 @@ if ($conn->query($sql) === TRUE) {
 else
     header('Location: ../../index.php?p=admin&r=editerror');
 $conn->close();
-?>

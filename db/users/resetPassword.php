@@ -69,7 +69,7 @@ try {
 
     //echo 'Message has been sent';
     if(!empty($param)){
-        header('Location: ../../index.php?p=login');
+        header('Location: ../../index.php?p=login&r=recpassok');
         exit();
     }else{
         header('Location: ../../index.php?p=admin&res=recpassok');

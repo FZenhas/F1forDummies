@@ -10,7 +10,7 @@
       <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-    <?php include('db/viewIconicDrivers.php'); ?>
+      <?php include('db/viewIconicDrivers.php'); ?>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

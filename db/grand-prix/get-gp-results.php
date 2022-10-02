@@ -22,7 +22,7 @@ if ($result->num_rows > 0) { ?>
                 <th scope="col">Localização</th>
                 <th scope="col">Circuito</th>
                 <th scope="col">Data</th>
-                <th scope="col">Posicao Resultado</th>
+                <th scope="col">Resultados</th>
                 <th scope="col">Editar</th>
             </tr>
         </thead>

@@ -56,14 +56,15 @@ header{
 
 #nav-user-photo{
     width: 70px;
-    height: 60px;
+    height: 65px;
     border-radius: 50%;
 }
 
 #username{
-    color: #E10600 ;
+    color: #E10600;
     font-style: bolder;
 }
+
 /*------------------ MAIN -----------------*/
 main h1{
     text-align: center;
@@ -549,7 +550,7 @@ footer i:hover{
 }
 
 
-/* -------------- MINHA CONTA ----------- */
+/* -------------- ACCOUNT ----------- */
 #account_btn_cancel, #account_btn_save, #account_btn_select_img, #account_btn_save_image{
     display: none;
 }
@@ -560,6 +561,11 @@ footer i:hover{
     border-radius: 50%;
 }
 
+/*-------NAV ADMIN ----------*/
+
+#nav-admin{
+    color: #000000;
+}
 /* -------------- ADMIN UPDATE DRIVERS RANK----------- */
 
 #input-points-1,#input-points-2,#input-points-3,#input-points-4,#input-points-5,#input-points-6,#input-points-7,#input-points-8,#input-points-9,#input-points-10,#input-points-11,#input-points-12,#input-points-13,#input-points-14,#input-points-15,#input-points-16,#input-points-17,#input-points-18,#input-points-19, #input-points-20 {

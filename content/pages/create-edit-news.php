@@ -2,7 +2,7 @@
   <div class="container w-50">
     <div class="col text-center">
     </div>
-<br>
+    <br>
     <?php if (isset($_GET['id'])) {
       include('db/news/select-news-by-id.php');
     } ?>

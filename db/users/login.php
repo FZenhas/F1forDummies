@@ -17,10 +17,6 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
 
-    /* --- LOGIN OK, UPDATE last_login ---
-    $id = $row['id'];
-    $sql_update = "UPDATE `users` SET last_login=NOW() WHERE id=$id";*/
-    /*$result_update = X $conn->query($sql_update); */
 
     /* --- LOGIN OK, SESSION --- */
     session_start();
@@ -34,4 +30,3 @@ if ($result->num_rows == 1) {
     header('Location: ../../index.php?p=login&r=loginerrado');
 }
 $conn->close();
-?>

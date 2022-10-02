@@ -3,7 +3,7 @@
 define('_DEFVAR', 1);
 include('db/conn.php');
 
-$sql = "SELECT p.id, p.text, p.posted_at, u.id as user_id, u.username, u.photo FROM posts p JOIN users u ON p.user_id = u.id order by p.id DESC limit 50";
+$sql = "SELECT p.id, p.text, p.posted_at, u.id as user_id, u.username, u.photo FROM posts p JOIN users u ON p.user_id = u.id order by p.posted_at DESC limit 50";
 
 $result = $conn->query($sql);
 

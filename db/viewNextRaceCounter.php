@@ -6,7 +6,8 @@ include('conn.php');
 $sql = "SELECT gp.name, gp.country_image, gp.country, gp.start_date, gp.end_date, DATEDIFF(gp.end_date, CURRENT_TIMESTAMP) as time FROM grand_prix gp
 JOIN results r
 ON gp.id = r.grand_prix_id
-WHERE r.driver_id is null LIMIT 1";
+where DATEDIFF(gp.end_date, CURRENT_TIMESTAMP) >= 0
+order by time ASC LIMIT 1";
 
 $result = $conn->query($sql);
 

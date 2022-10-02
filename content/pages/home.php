@@ -20,9 +20,9 @@
     </div>
     <br>
     <div class="container ">
-        <div class="text-center">
-            <h2>Imagens únicas da Formula 1</h2> <br>
-        </div>
+      <div class="text-center bg-grey">
+        <h2><i>Veja a nossa galeria de imagens!</i></h2> <br>
+      </div>
     </div>
     <div class="container-fluid">
       <div class="row">

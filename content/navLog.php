@@ -16,7 +16,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php if ($_SESSION['data'] != "") {
-                            ?><img id="nav-user-photo" src="img/users/<?= $_SESSION['data'] ?>" alt=""><?php
+                            ?><img id="nav-user-photo" src="img/users/<?= $_SESSION['data'] ?>" id="form-img"alt=""><?php
                             } else {
                             ?><img id="nav-user-photo" src="img/users/people.png" id="form-img" alt=""><?php
                             } ?>

@@ -34,6 +34,6 @@ if ($result->num_rows > 0) {
         <?php
     }
         ?><?php
-    }
-    $conn->close();
-        ?>
+        }
+        $conn->close();
+            ?>

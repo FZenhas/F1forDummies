@@ -55,14 +55,13 @@ INSERT INTO
         user_type_id
     )
 VALUES (
-        'admin',
+        'Admin',
         'admin@admin.pt',
         'admin-pic.jpg',
         MD5('admin'),
         1
-    ),
-    (
-        'user',
+    ), (
+        'Toze#14',
         'user@userpt',
         'ayrton-senna.jpg',
         MD5('user'),
@@ -103,7 +102,7 @@ CREATE TABLE
     posts(
         id INT PRIMARY KEY AUTO_INCREMENT,
         text VARCHAR(700) NOT NULL,
-        posted_at datetime,
+        posted_at TIMESTAMP,
         user_id INT,
         FOREIGN KEY (user_id) REFERENCES users(id)
     );
@@ -111,12 +110,12 @@ CREATE TABLE
 INSERT INTO
     posts(text, posted_at, user_id)
 VALUES (
-        'Este ano não há hipótese. O Max vai ganhar fácil!',
-        '2022-10-01 19:30:10',
+        'Bom tarde comunidade #F1forDummies! O que acharam do GP de Singapura?',
+        '2022-10-02 06:23:34',
         1
     ), (
-        'O circuito de singatura é brutal!',
-        '2022-10-01 18:30:10',
+        'Este ano não há hipótese. O Max vai ganhar fácil!',
+        '2022-10-01 01:40:10',
         2
     ), (
         'Será que o Latifi consegue levar um pontinho para casa? :D',
@@ -135,11 +134,11 @@ INSERT INTO gallery(picture)
 VALUES (
         'Img/Gallery/2022-Bahrain-Grand-Prix.jpg'
     ), ('Img/Gallery/f1-2022.jpg'), ('Img/Gallery/f1-cars.webp'), (
-        'Img/Gallery/toto-wolff-team-principal-and-.webp'
+        'Img/Gallery/toto-wolff-chris-horner.jpg'
     ), (
         'Img/Gallery/f1-drivers-2021.jpg'
     ), ('Img/Gallery/f1-lineup.webp'), ('Img/Gallery/image-F1.jpg'), (
-        'Img/Gallery/verstappen-pitstop-.jpg'
+        'Img/Gallery/pit-red-bull.jpg'
     );
 
 CREATE TABLE
@@ -245,7 +244,7 @@ VALUES (
         'Img/Equipas_carros/alphatauri.png',
         'https://scuderia.alphatauri.com/en/',
         'https://www.instagram.com/alphataurif1/',
-        '33'
+        '34'
     ), (
         'Alpine',
         'BWT Alpine F1 Team',
@@ -269,7 +268,7 @@ VALUES (
         'Img/Equipas_carros/astonmartin.png',
         'https://www.astonmartinf1.com/en-GB/',
         'https://www.instagram.com/astonmartinf1/?hl=pt',
-        '25'
+        '37'
     ), (
         'Ferrari',
         'Scuderia Ferrari',
@@ -281,7 +280,7 @@ VALUES (
         'Img/Equipas_carros/ferrari.png',
         'https://www.ferrari.com/en-PT',
         'https://www.instagram.com/ferrari/',
-        '406'
+        '439'
     ), (
         'Haas F1 Team',
         'Haas F1 Team',
@@ -305,7 +304,7 @@ VALUES (
         'Img/Equipas_carros/McLaren.png',
         'https://www.mclaren.com/',
         'https://www.instagram.com/mclaren/',
-        '107'
+        '129'
     ), (
         'Mercedes',
         'Mercedes-AMG Petronas F1 Team',
@@ -317,7 +316,7 @@ VALUES (
         'Img/Equipas_carros/mercedes.png',
         'https://www.mercedesamgf1.com/en/',
         'https://www.instagram.com/mercedesamgf1/',
-        '371'
+        '373'
     ), (
         'Red Bull Racing',
         'Oracle Red Bull Racing',
@@ -329,7 +328,7 @@ VALUES (
         'Img/Equipas_carros/redbull.png',
         'https://www.redbullracing.com/int-en',
         'https://www.instagram.com/redbullracing/',
-        '545'
+        '576'
     ), (
         'Williams',
         'Williams Racing',
@@ -624,7 +623,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/pierregasly/',
         'Img/Pilotos/pierre-gasly.jpeg',
-        '22'
+        '23'
     ), (
         '1',
         'Zhou Guanyu',
@@ -648,7 +647,7 @@ VALUES (
         'Hamilton nunca usou o número 1. "O meu numero de corridas aos oito anos era 44. Mesmo sendo o número um, mantive o 44", explica Hamilton',
         'https://www.instagram.com/lewishamilton/',
         'Img/Pilotos/Lewis-Hamilton.jpg',
-        '168'
+        '170'
     ), (
         '10',
         'Nicholas Latifi',
@@ -672,7 +671,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/charles_leclerc/',
         'Img/Pilotos/leclerc.jpg',
-        '219'
+        '237'
     ), (
         '6',
         'Kevin Magnussen',
@@ -696,7 +695,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/landonorris/',
         'Img/Pilotos/lando-norris.jpg',
-        '88'
+        '100'
     ), (
         '3',
         'Esteban Ocon',
@@ -720,7 +719,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/schecoperez/',
         'Img/Pilotos/sergio-perez-.jpg',
-        '210'
+        '235'
     ), (
         '7',
         'Daniel Ricciardo',
@@ -732,7 +731,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/danielricciardo/',
         'Img/Pilotos/Daniel-Ricciardo.jpg',
-        '19'
+        '29'
     ), (
         '8',
         'George Russell',
@@ -756,7 +755,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/carlossainz55/',
         'Img/Pilotos/Carlos-Sainz.jpg',
-        '187'
+        '202'
     ), (
         '6',
         'Mick Schumacher',
@@ -780,7 +779,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/lance_stroll/channel/',
         'Img/Pilotos/lance-stroll.webp',
-        '5'
+        '13'
     ), (
         '2',
         'Yuki Tsunoda',
@@ -804,7 +803,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/maxverstappen1/',
         'Img/Pilotos/verstappen1.jpg',
-        '335'
+        '341'
     ), (
         '4',
         'Sebastian Vettel',
@@ -816,7 +815,7 @@ VALUES (
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, cupiditate?',
         'https://www.instagram.com/sebastianvettel/',
         'Img/Pilotos/Sebastian-vettel.png',
-        '20'
+        '24'
     );
 
 CREATE TABLE
@@ -835,4 +834,4 @@ INSERT INTO
         driver_id,
         driver_position
     )
-VALUES ('1', '8', '1'), ('1', '15', '2'), ('1', '6', '3'), ('2', '19', '1'), ('2', '8', '2'), ('2', '15', '3'), ('3', '8', '1'), ('3', '12', '2'), ('3', '14', '3'), ('4', '19', '1'), ('4', '12', '2'), ('4', '10', '3'), ('5', '19', '1'), ('5', '8', '2'), ('5', '15', '3'), ('6', '8', '1'), ('6', '12', '2'), ('6', '14', '3'), ('7', '12', '1'), ('7', '15', '2'), ('7', '19', '3'), ('8', '19', '1'), ('8', '12', '2'), ('8', '14', '3'), ('9', '19', '1'), ('9', '15', '2'), ('9', '6', '3'), ('10', '15', '1'), ('10', '12', '2'), ('10', '6', '3'), ('11', '8', '1'), ('11', '19', '2'), ('11', '6', '3'), ('12', '19', '1'), ('12', '6', '2'), ('12', '14', '3'), ('13', '19', '1'), ('13', '6', '2'), ('13', '14', '3'), ('14', '19', '1'), ('14', '12', '2'), ('14', '15', '3'), ('15', '19', '1'), ('15', '14', '2'), ('15', '8', '3'), ('16', '19', '1'), ('16', '8', '2'), ('16', '14', '3'), ('17', NULL, '1'), ('17', NULL, '2'), ('17', NULL, '3'), ('18', NULL, '1'), ('18', NULL, '2'), ('18', NULL, '3'), ('19', NULL, '1'), ('19', NULL, '2'), ('19', NULL, '3'), ('20', NULL, '1'), ('20', NULL, '2'), ('20', NULL, '3'), ('21', NULL, '1'), ('21', NULL, '2'), ('21', NULL, '3'), ('22', NULL, '1'), ('22', NULL, '2'), ('22', NULL, '3');
+VALUES ('1', '8', '1'), ('1', '15', '2'), ('1', '6', '3'), ('2', '19', '1'), ('2', '8', '2'), ('2', '15', '3'), ('3', '8', '1'), ('3', '12', '2'), ('3', '14', '3'), ('4', '19', '1'), ('4', '12', '2'), ('4', '10', '3'), ('5', '19', '1'), ('5', '8', '2'), ('5', '15', '3'), ('6', '8', '1'), ('6', '12', '2'), ('6', '14', '3'), ('7', '12', '1'), ('7', '15', '2'), ('7', '19', '3'), ('8', '19', '1'), ('8', '12', '2'), ('8', '14', '3'), ('9', '19', '1'), ('9', '15', '2'), ('9', '6', '3'), ('10', '15', '1'), ('10', '12', '2'), ('10', '6', '3'), ('11', '8', '1'), ('11', '19', '2'), ('11', '6', '3'), ('12', '19', '1'), ('12', '6', '2'), ('12', '14', '3'), ('13', '19', '1'), ('13', '6', '2'), ('13', '14', '3'), ('14', '19', '1'), ('14', '12', '2'), ('14', '15', '3'), ('15', '19', '1'), ('15', '14', '2'), ('15', '8', '3'), ('16', '19', '1'), ('16', '8', '2'), ('16', '14', '3'), ('17', '12', '1'), ('17', '8', '2'), ('17', '15', '3'), ('18', NULL, '1'), ('18', NULL, '2'), ('18', NULL, '3'), ('19', NULL, '1'), ('19', NULL, '2'), ('19', NULL, '3'), ('20', NULL, '1'), ('20', NULL, '2'), ('20', NULL, '3'), ('21', NULL, '1'), ('21', NULL, '2'), ('21', NULL, '3'), ('22', NULL, '1'), ('22', NULL, '2'), ('22', NULL, '3');

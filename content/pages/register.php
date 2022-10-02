@@ -35,8 +35,8 @@
     </form>
     <br>
   </div>
+
   <?php
-  //VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO//VALIDA SE RECEBE CÓDIGO DE ERRO E APRESENTA ALERT CONSOANTE O ERRO
   if (isset($_GET['r'])) {
     $r = $_GET['r'];
     if ($r == 'empty') { ?>

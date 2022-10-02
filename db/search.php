@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </div>
-        <?php
+    <?php
     }
 }
 
@@ -52,12 +52,12 @@ $sql = "SELECT team_name, full_team_name, location,  team_chief, motor, world_ch
 FROM teams
 WHERE team_name LIKE '%$param%'";
 
-        $result = $conn->query($sql);
+$result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
 
-            ?>
+    ?>
         <div class="col-12 col-md-6 col-lg-4 mb-2">
             <div id="construtores" class="card" style="width: 18rem;">
                 <img src="<?= $row['logo'] ?>" class="card-img-top" alt="...">
@@ -80,7 +80,7 @@ WHERE team_name LIKE '%$param%'";
             </div>
         </div>
     <?php
-            }
+    }
     ?></div><?php
         }
         $conn->close();
