@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 02-Out-2022 às 21:14
+-- Tempo de geração: 02-Out-2022 às 23:02
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 7.4.29
 
@@ -210,10 +210,9 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `text`, `posted_at`, `user_id`) VALUES
-(1, 'Bom tarde comunidade #F1forDummies! O que acharam do GP de Singapura? :D', '2022-10-02 19:08:26', 1),
-(2, 'Este ano não há hipótese. O Max vai ganhar fácil!', '2022-10-01 00:40:10', 2),
-(3, 'Será que o Latifi consegue levar um pontinho para casa? :D', '2022-10-01 02:30:10', 2),
-(4, 'Granda corrida! Só é pena o Vettel', '2022-10-02 07:59:03', 3);
+(1, 'Bom tarde comunidade #F1forDummies! O que acharam do GP de Singapura?', '2022-10-02 17:23:34', 1),
+(2, 'Este ano não há hipótese. O Max vai ganhar fácil!', '2022-10-01 12:40:10', 2),
+(3, 'Será que o Latifi consegue levar um pontinho para casa? :D', '2022-10-01 14:30:10', 2);
 
 -- --------------------------------------------------------
 
@@ -360,8 +359,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `user_type_id`, `username`, `email`, `password`, `photo`, `visibility`) VALUES
 (1, 1, 'Admin', 'admin@admin.pt', '21232f297a57a5a743894a0e4a801fc3', 'admin-pic.jpg', b'1'),
-(2, 2, 'Toze#14', 'user@userpt', 'ee11cbb19052e40b07aac0ca060c23ee', 'ayrton-senna.jpg', b'1'),
-(3, 2, 'Amalia', 'a@a.pt', 'ce9b963f7055bb8926ebcb9610809847', NULL, b'1');
+(2, 2, 'Toze#14', 'user@userpt', 'ee11cbb19052e40b07aac0ca060c23ee', 'ayrton-senna.jpg', b'1');
 
 -- --------------------------------------------------------
 
@@ -494,7 +492,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT de tabela `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `results`
@@ -512,7 +510,7 @@ ALTER TABLE `teams`
 -- AUTO_INCREMENT de tabela `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `users_type`

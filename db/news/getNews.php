@@ -70,7 +70,7 @@ if ($result->num_rows > 0) { ?>
                         <td><?= $row['id'] ?></td>
                         <td><?= $row['text'] ?></td>
 
-                        <td><a href="index.php?p=create-edit-news&id=<?=$row['id']?>"><button class="btn btn-success"><i class="bi bi-pencil"> Editar</button></a></td>
+                        <td><a href="index.php?p=create-edit-news&id=<?=$row['id']?>"><button class="btn btn-success"><i class="bi bi-pencil"></i> Editar</button></a></td>
 
                         <td><a href="db/news/deleteNews.php?id=<?=$row['id']?>"><button class="btn btn-danger">Apagar</button></a></td>
 

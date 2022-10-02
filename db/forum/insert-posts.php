@@ -8,7 +8,7 @@ if(empty($_POST['form-post'])){
 
 $text = $_POST['form-post'];
 $id = $_SESSION['id'];
-$current_date = date("Y-m-d h:i:sa");
+$current_date = date("Y-m-d H:i:sa");
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);

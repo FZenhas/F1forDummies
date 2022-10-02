@@ -111,15 +111,15 @@ INSERT INTO
     posts(text, posted_at, user_id)
 VALUES (
         'Bom tarde comunidade #F1forDummies! O que acharam do GP de Singapura?',
-        '2022-10-02 06:23:34',
+        '2022-10-02 18:23:34',
         1
     ), (
         'Este ano não há hipótese. O Max vai ganhar fácil!',
-        '2022-10-01 01:40:10',
+        '2022-10-01 13:40:10',
         2
     ), (
         'Será que o Latifi consegue levar um pontinho para casa? :D',
-        '2022-10-01 03:30:10',
+        '2022-10-01 15:30:10',
         2
     );
 
