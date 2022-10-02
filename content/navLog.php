@@ -21,9 +21,10 @@
                             ?><img id="nav-user-photo" src="img/users/people.png" id="form-img" alt=""><?php
                             } ?>
                         </a>
+                        <h5 id="username">Hi, <?php echo $_SESSION['username'] ?>!</h5>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li>
-                                <a class="dropdown-item" href="index.php?p=minhaconta">Configurações conta</a>
+                                <a class="dropdown-item" href="index.php?p=account">Configurações conta</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="index.php?p=forum">Forum</a>
@@ -31,7 +32,7 @@
                             <?php if (!empty($_SESSION['type']) && $_SESSION['type'] == 1) { //utilizador administrador
                             ?>
                                 <li>
-                                    <a class="dropdown-item" href="index.php?p=administracao">Admin</a>
+                                    <a class="dropdown-item" href="index.php?p=admin">Admin</a>
                                 </li>
                             <?php } ?>
                             <li>

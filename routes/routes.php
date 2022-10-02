@@ -3,34 +3,34 @@
 if(isset($_GET['p'])){
     $pag=$_GET['p'];
 
-if($pag == 'paginainicial')
-    include('content/pages/paginainicial.php');
-else if($pag == 'F1')
-    include('content/pages/F1.php');
-else if($pag == 'Pilotos')
-    include('content/pages/Pilotos.php');
-else if($pag == 'Classificacao-pilotos')
-    include('content/pages/Classificacao/Classificacao-pilotos.php');
-else if($pag == 'Classificacao-construtores')
-    include('content/pages/Classificacao/Classificacao-construtores.php');
-else if($pag == 'Construtores')
-    include('content/pages/Construtores.php');
-else if($pag == 'Circuito')
-    include('content/pages/Circuito.php');
-else if($pag == 'Pitstop')
-    include('content/pages/Pitstop.php');
-else if($pag == 'PilotosIconicos')
-    include('content/pages/PilotosIconicos.php');
-else if($pag == 'Quizz')
-    include('content/pages/Quizz.php');
+if($pag == 'home')
+    include('content/pages/home.php');
+else if($pag == 'f1')
+    include('content/pages/f1.php');
+else if($pag == 'drivers')
+    include('content/pages/drivers.php');
+else if($pag == 'drivers-ranking')
+    include('content/pages/rankings/drivers-ranking.php');
+else if($pag == 'teams-ranking')
+    include('content/pages/rankings/teams-ranking.php');
+else if($pag == 'teams')
+    include('content/pages/teams.php');
+else if($pag == 'schedule-2022')
+    include('content/pages/schedule-2022.php');
+else if($pag == 'pitstop')
+    include('content/pages/pitstop.php');
+else if($pag == 'iconic-drivers')
+    include('content/pages/iconic-drivers.php');
+else if($pag == 'quizz')
+    include('content/pages/quizz.php');
 else if($pag == 'login' && empty($_SESSION['username']))
     include('content/pages/login.php');
-else if($pag == 'registo' && empty($_SESSION['username']))
-    include('content/pages/registo.php');
-else if($pag == 'minhaconta'&& !empty($_SESSION['username']))
-    include('content/pages/minha-conta.php');
-else if($pag == 'administracao'&& !empty($_SESSION['type']) && $_SESSION['type']==1)
-    include('content/pages/administracao.php');
+else if($pag == 'register' && empty($_SESSION['username']))
+    include('content/pages/register.php');
+else if($pag == 'account'&& !empty($_SESSION['username']))
+    include('content/pages/account.php');
+else if($pag == 'admin'&& !empty($_SESSION['type']) && $_SESSION['type']==1)
+    include('content/pages/admin.php');
 else if($pag == 'forum'&& !empty($_SESSION['username']))
     include('content/pages/forum.php');
 else if($pag == 'admin-teams-ranking' && !empty($_SESSION['type']) && $_SESSION['type']==1)
@@ -49,8 +49,8 @@ else if($pag == 'logout' && !empty($_SESSION['username']))
 else
     include ('content/pages/404.php');
 }else if(isset($_GET['search']))
-    include('content/pages/Pilotos.php');
+    include('content/pages/drivers.php');
 else{
-    include('content/pages/paginainicial.php');
+    include('content/pages/home.php');
 }
 ?>

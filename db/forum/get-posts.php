@@ -34,11 +34,11 @@ if ($result->num_rows > 0) {
                 <div><i class="bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#exampleModal-<?= $row['id'] ?>"></i>
                 <?php } ?>
                 <?php if ($_SESSION['id'] == 1 || $_SESSION['id'] == $row['user_id']) { ?>
-                    <a href="db/forum/delete-posts.php?id=<?= $row['id'] ?>"><i class="bi bi-trash3-fill"></i>
+                    <i class="bi bi-trash3-fill" data-bs-toggle="modal" data-bs-target="#deleteModal-<?= $row['id'] ?>"></i>
                 </div></a>
             <?php } ?>
         </ul>
-        <!-- Modal -->
+        <!-- Modal update -->
         <form action="db/forum/update-posts.php" method="post">
 
             <div class="modal fade" id="exampleModal-<?= $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,6 +55,29 @@ if ($result->num_rows > 0) {
                             <td><input id="input-id" name="input-id" value="<?= $row['id'] ?>"></input></td>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                             <button type="submit" class="btn btn-success">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Modal delete -->
+        <form action="db/forum/delete-posts.php" method="get">
+
+            <div class="modal fade" id="deleteModal-<?= $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Apagar post</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Tem a certeza que quer apagar este post?
+                        </div>
+                        <div class="modal-footer">
+                            <td><input id="input-id" name="input-id" value="<?= $row['id'] ?>"></input></td>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-dark">Confirmar</button>
                         </div>
                     </div>
                 </div>

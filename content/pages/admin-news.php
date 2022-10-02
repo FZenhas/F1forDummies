@@ -2,7 +2,7 @@
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="index.php?p=administracao">Upadate Classificação Pilotos</a>
+    <a class="nav-link" aria-current="page" href="index.php?p=admin">Upadate Classificação Pilotos</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="index.php?p=admin-teams-ranking">Upadate Classificação Construtores</a>
@@ -17,7 +17,7 @@
 </ul>
 
 <div class="container ">
-<div class="col text-center"><h1>Update news</h1></div>
+<div class="col text-center"><h1>News</h1></div>
 <?php
 //VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO
 if(isset($_GET['r'])){

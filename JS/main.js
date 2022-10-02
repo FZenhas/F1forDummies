@@ -126,7 +126,7 @@ function loadNews(){
         }
         x.open("GET","db/news.php",true);
         x.send();
-    },3000);    //executar de 10s em 10s
+    },3000);
 }
 
 /* CRUD USERS */
@@ -150,7 +150,7 @@ function account_edit(){
 }
 
 function account_cancel(){
-    window.location.replace("index.php?p=minhaconta")
+    window.location.replace("index.php?p=account")
 }
 
 
@@ -170,7 +170,7 @@ function drivers_ranking_save(id){
 }
 
 function drivers_ranking_cancel(id){
-    window.location.replace("index.php?p=administracao")
+    window.location.replace("index.php?p=admin")
 }
 
 

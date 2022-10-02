@@ -1,9 +1,9 @@
 <?php
-if(!isset($_GET['id'])){
+if(!isset($_GET['input-id'])){
     header('Location: ../../index.php?p=forum&r=emptyposts');
     exit();
 }
-$id = $_GET['id'];
+$id = $_GET['input-id'];
 
 // In the base page (directly accessed):
 define('_DEFVAR', 1);

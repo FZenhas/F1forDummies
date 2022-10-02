@@ -23,7 +23,7 @@
   </div>
   <br>
   <div class="start-register">
-  <span>Não tem uma conta? <a href="index.php?p=registo">Registe-se aqui!</a></span>
+  <span>Não tem uma conta? <a href="index.php?p=register">Registe-se aqui!</a></span>
   </div>
 
 </form>
@@ -33,7 +33,7 @@
 //VALIDA SE RECEBE CÓDIGO DE RESULTADO E APRESENTA ALERT CONSOANTE O MESMO
 if(isset($_GET['r'])){
   $r = $_GET['r'];
-  if($r == 'registook'){ ?>
+  if($r == 'registerok'){ ?>
 
     <div class="alert alert-success" role="alert">
       Registo efetuado com sucesso. Faça login.

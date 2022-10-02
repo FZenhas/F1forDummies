@@ -7,7 +7,7 @@ $sql = "UPDATE `users` SET password=MD5('$novaPass') WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
 } else if(empty($param)){
-    header('Location: ../../index.php?p=administracao&r=updateerro');
+    header('Location: ../../index.php?p=admin&r=updateerro');
 } else if(!empty($param)){
     header('Location: ../../index.php?p=login&r=updateerro');
 }

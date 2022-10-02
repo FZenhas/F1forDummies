@@ -29,7 +29,7 @@ if ($result->num_rows == 1) {
     $_SESSION['type']=$row['user_type_id'];
     $_SESSION['data']=$row['photo'];
 
-    header('Location: ../../index.php?p=paginainicial');
+    header('Location: ../../index.php?p=home');
 } else {
     header('Location: ../../index.php?p=login&r=loginerrado');
 }

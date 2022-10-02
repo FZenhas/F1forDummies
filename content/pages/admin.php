@@ -8,7 +8,7 @@ if($_SESSION['type']!=1){
 
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="index.php?p=administracao">Update Classificação Pilotos</a>
+    <a class="nav-link active" aria-current="page" href="index.php?p=admin">Update Classificação Pilotos</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="index.php?p=admin-teams-ranking">Update Classificação Construtores</a>

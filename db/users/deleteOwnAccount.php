@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION['id'])){
-    header('Location: ../index.php?p=minhaconta&r=empty');
+    header('Location: ../index.php?p=account&r=empty');
     exit();
 }
 $id = $_SESSION['id'];
@@ -15,7 +15,7 @@ $sql = "UPDATE `users` SET visibility = 0 WHERE id=$id";
 if ($conn->query($sql) === TRUE)
     header('Location: ../../index.php?p=logout');
 else
-    header('Location: ../../index.php?p=minhaconta&r=deleteerror');
+    header('Location: ../../index.php?p=account&r=deleteerror');
 $conn->close();
 ?>
 

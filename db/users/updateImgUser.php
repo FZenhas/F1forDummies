@@ -16,9 +16,9 @@ include('../conn.php');
 $sql = "UPDATE `users` SET photo='u$id.png' WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location:../../index.php?p=minhaconta&r=updateok');
+    header('Location:../../index.php?p=account&r=updateok');
 } else {
-    header('Location:../../index.php?p=minhaconta&r=updateerror');
+    header('Location:../../index.php?p=account&r=updateerror');
 }
 
 $conn->close();

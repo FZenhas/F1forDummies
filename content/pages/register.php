@@ -30,7 +30,7 @@
         <button type="submit" class="btn btn-dark">Registar</button>
       </div>
       <div class="reg-back-intro">
-        <a href="index.php?p=paginainicial">Voltar à página incial</a>
+        <a href="index.php?p=home">Voltar à página incial</a>
       </div>
     </form>
     <br>

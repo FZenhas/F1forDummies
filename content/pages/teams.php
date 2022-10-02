@@ -9,6 +9,6 @@
         include('db/teams/viewTeams.php');
     ?>
 
-      <p>Para saber qual a classificação atual de cada Construtor consulta esta <a href="index.php?p=Classificacao-construtores"> página.</a></p>
+      <p>Para saber qual a classificação atual de cada Construtor consulta esta <a href="index.php?p=teams-ranking"> página.</a></p>
     </div>
   </div>

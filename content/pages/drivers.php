@@ -20,7 +20,7 @@
 
                 <?php
                 if (!isset($_GET['search'])) { ?>
-                    <p>Para saber qual a classificação atual de cada Piloto consulta esta <a href="index.php?p=Classificacao-pilotos"> página.</a></p>
+                    <p>Para saber qual a classificação atual de cada Piloto consulta esta <a href="index.php?p=drivers-ranking"> página.</a></p>
                 <?php } ?>
             </div>
         </div>

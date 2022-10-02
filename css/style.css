@@ -1,7 +1,7 @@
 body{
     font-family:'Arial Narrow', Arial, sans-serif;
     text-align: justify;
-    background-image: url(../Img/bg/bg-f1.webp);
+    background-image: url(../Img/bg/bg-f1.jpg);
     opacity: 0.92;
 }
 
@@ -55,12 +55,15 @@ header{
 /*----------------- NAV LOG ----------------*/
 
 #nav-user-photo{
-    width: 60px;
+    width: 70px;
     height: 60px;
     border-radius: 50%;
 }
 
-
+#username{
+    color: #E10600 ;
+    font-style: bolder;
+}
 /*------------------ MAIN -----------------*/
 main h1{
     text-align: center;
@@ -552,8 +555,9 @@ footer i:hover{
 }
 
 #form-img{
-    width: 150px;
+    width: 160px;
     height: 150px;
+    border-radius: 50%;
 }
 
 /* -------------- ADMIN UPDATE DRIVERS RANK----------- */
@@ -636,8 +640,10 @@ footer i:hover{
     color: #E4F6F8;
 }
 
+/*--------FORUM ------------*/
+
 #post-pic{
-    width: 75px;
+    width: 80px;
     height: 75px;
     border-radius: 50%;
 }

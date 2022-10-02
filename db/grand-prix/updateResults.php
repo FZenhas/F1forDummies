@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION['id'])){
-    header('Location: ../../index.php?p=administracao&r=empty');
+    header('Location: ../../index.php?p=admin&r=empty');
     exit();
 }
 $id = $_SESSION['id'];

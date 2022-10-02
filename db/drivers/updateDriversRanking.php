@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION['id'])){
-    header('Location: ../../index.php?p=administracao&r=empty');
+    header('Location: ../../index.php?p=admin&r=empty');
     exit();
 }
 $id = $_SESSION['id'];
@@ -17,9 +17,9 @@ include('../conn.php');
 $sql = "UPDATE drivers SET points=$points where id=$id";
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: ../../index.php?p=administracao&r=editok');
+    header('Location: ../../index.php?p=admin&r=editok');
 }
 else
-    header('Location: ../../index.php?p=administracao&r=editerror');
+    header('Location: ../../index.php?p=admin&r=editerror');
 $conn->close();
 ?>

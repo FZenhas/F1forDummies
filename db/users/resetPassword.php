@@ -72,7 +72,7 @@ try {
         header('Location: ../../index.php?p=login');
         exit();
     }else{
-        header('Location: ../../index.php?p=administracao&res=recpassok');
+        header('Location: ../../index.php?p=admin&res=recpassok');
         exit();
     }
 
@@ -82,7 +82,7 @@ try {
         header('Location: ../../index.php?p=login');
         exit();
     }else if(empty($param)){
-        header('Location: ../../index.php?p=administracao&res=recpasserro');
+        header('Location: ../../index.php?p=admin&res=recpasserro');
         exit();
     }else{
         header('Location: ../../index.php?p=login');

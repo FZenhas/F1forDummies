@@ -9,4 +9,4 @@
     <?php include('db/drivers/viewDriversRanking.php'); ?>
     <br>
 
-    <p>Para saber mais sobre cada Piloto consulte esta <a href="index.php?p=Pilotos"> página.</a></p>
+    <p>Para saber mais sobre cada Piloto consulte esta <a href="index.php?p=drivers"> página.</a></p>
