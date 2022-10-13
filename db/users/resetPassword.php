@@ -47,14 +47,14 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.sapo.pt';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'fz_cesae@sapo.pt';                     //SMTP username
-    $mail->Password   = 'FiP4ssw0rd13!';                               //SMTP password
+    $mail->Username   = 'xxx@sapo.pt';                     //SMTP username
+    $mail->Password   = '';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     $mail->CharSet = 'UTF-8';
 
     //Recipients
-    $mail->setFrom('fz_cesae@sapo.pt', 'Admin');
+    $mail->setFrom('xxx@sapo.pt', 'Admin');
     $mail->addAddress($email, $username);     //Add a recipient
 
     //Content

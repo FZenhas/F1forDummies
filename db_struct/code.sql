@@ -62,7 +62,7 @@ VALUES (
         1
     ), (
         'Toze#14',
-        'user@userpt',
+        'user@user.pt',
         'ayrton-senna.jpg',
         MD5('user'),
         2
